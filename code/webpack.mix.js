@@ -11,7 +11,15 @@ const mix = require('laravel-mix');
  |
  */
 
+mix.webpackConfig({
+    watchOptions: {
+        ignored: '**/node_modules'
+    }
+});
+
 mix.js('resources/js/app.js', 'public/js')
-    .postCss('resources/css/app.css', 'public/css', [
-        //
-    ]);
+    .postCss("resources/css/app.css", "public/css", [
+        require("tailwindcss"),
+    ])
+    .sass('resources/sass/app.scss','public/css')
+    .sourceMaps();

@@ -1,0 +1,5 @@
+npm install
+npm i sass-loader
+npm i --save-dev process
+su laradock
+npm run watch-poll
