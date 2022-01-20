@@ -1,9 +1,0 @@
-div {
-  -webkit-backdrop-filter: blur();
-          backdrop-filter: blur();
-  color: #0f6674;
-}
-body{
-    background-color: black;
-}
-

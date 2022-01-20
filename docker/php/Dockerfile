@@ -16,3 +16,5 @@ RUN mv $PHP_INI_DIR/php.ini-production $PHP_INI_DIR/php.ini
 COPY php.ini $PHP_INI_DIR/conf.d/custom_php.ini
 
 WORKDIR /var/www
+
+CMD tail -f /dev/null
