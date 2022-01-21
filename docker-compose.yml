@@ -1,69 +1,65 @@
+# For more information: https://laravel.com/docs/sail
 version: '3'
 services:
-  nginx:
-    image: nginx:mainline-alpine
-    ports:
-      - "8080:80"
-    volumes:
-      - ./src:/var/www
-      - ./docker/nginx/conf.d/default.conf:/etc/nginx/conf.d/default.conf
-      - ./docker/logs/nginx:/var/log/nginx
-    links:
-      - php
-    depends_on:
-      - php
-      - mysql
-  artisan:
-    build:
-      context: ./docker/artisan
-      dockerfile: Dockerfile
-    volumes:
-      - ./src:/var/www
-    links:
-      - mysql
-    depends_on:
-      - mysql
-  composer:
-    build:
-      context: ./docker/composer
-      dockerfile: Dockerfile
-    volumes:
-      - ./src:/var/www
-  php:
-    build:
-      context: ./docker/php
-      dockerfile: Dockerfile
-    volumes:
-      - ./src:/var/www
-    links:
-      - mysql
-    depends_on:
-      - mysql
-  mysql:
-    image: mysql:5.7
-    volumes:
-      - db_data:/var/lib/mysql
-      - ./docker/logs/mysql:/var/log/mysql
-    environment:
-      MYSQL_ROOT_PASSWORD: BxYDGxaeY5TTa
-      MYSQL_DATABASE: personal_page
-      MYSQL_USER: sajad
-      MYSQL_PASSWORD: Tv7WXfQsmspNqA
-  nodejs:
-    build:
-      context: docker/nodejs
-      dockerfile: Dockerfile
-    volumes:
-      - ./src:/var/www
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin:latest
-    depends_on:
-      - mysql
-    ports:
-      - "8082:80"
-    environment:
-      MYSQL_ROOT_PASSWORD: hBxYDGxaeY5TTa
-      PMA_USER: sajad
-      PMA_PASSWORD: Tv7WXfQsmspNqA
+    laravel.test:
+        build:
+            context: ./vendor/laravel/sail/runtimes/8.1
+            dockerfile: Dockerfile
+            args:
+                WWWGROUP: '${WWWGROUP}'
+        image: sail-8.1/app
+        extra_hosts:
+            - 'host.docker.internal:host-gateway'
+        ports:
+            - '${APP_PORT:-80}:80'
+        environment:
+            WWWUSER: '${WWWUSER}'
+            LARAVEL_SAIL: 1
+            XDEBUG_MODE: '${SAIL_XDEBUG_MODE:-off}'
+            XDEBUG_CONFIG: '${SAIL_XDEBUG_CONFIG:-client_host=host.docker.internal}'
+        volumes:
+            - '.:/var/www/html'
+        networks:
+            - sail
+        depends_on:
+            - mysql
+            - redis
+    mysql:
+        image: 'mysql/mysql-server:8.0'
+        ports:
+            - '${FORWARD_DB_PORT:-3306}:3306'
+        environment:
+            MYSQL_ROOT_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ROOT_HOST: "%"
+            MYSQL_DATABASE: '${DB_DATABASE}'
+            MYSQL_USER: '${DB_USERNAME}'
+            MYSQL_PASSWORD: '${DB_PASSWORD}'
+            MYSQL_ALLOW_EMPTY_PASSWORD: 1
+        volumes:
+            - 'sail-mysql:/var/lib/mysql'
+        networks:
+            - sail
+        healthcheck:
+            test: ["CMD", "mysqladmin", "ping", "-p${DB_PASSWORD}"]
+            retries: 3
+            timeout: 5s
+    redis:
+        image: 'redis:alpine'
+        ports:
+            - '${FORWARD_REDIS_PORT:-6379}:6379'
+        volumes:
+            - 'sail-redis:/data'
+        networks:
+            - sail
+        healthcheck:
+            test: ["CMD", "redis-cli", "ping"]
+            retries: 3
+            timeout: 5s
+networks:
+    sail:
+        driver: bridge
 volumes:
-  db_data:
+    sail-mysql:
+        driver: local
+    sail-redis:
+        driver: local

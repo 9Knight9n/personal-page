@@ -1,15 +1,13 @@
 set up project:
-    docker-compose run --rm composer create-project --prefer-dist laravel/laravel .
-    change DB_HOST in .env to point to mysql
-    docker-compose run --rm nodejs npm install
-    docker-compose run --rm nodejs npm i sass-loader
-    docker-compose run --rm nodejs npm install -D tailwindcss postcss autoprefixer
-    docker-compose run --rm nodejs npx tailwindcss init
-    docker-compose run --rm nodejs npm install sass resolve-url-loader@^5.0.0 --save-dev --legacy-peer-deps
-    docker-compose run --rm nodejs npm install --save-dev postcss-import
-    copy docker/laravel folder to src
+    curl -s "https://laravel.build/example-app?with=mysql,redis" | bash
+    sail up
+    sail npm install
+    sail install -D tailwindcss postcss autoprefixer postcss-import
+    sail npx tailwindcss init
+
+    copy config folder
 
 
 run project:
-    docker-compose up
-    docker-compose run --rm nodejs npm run watch
+    sail up
+    sail npm run watch-poll
