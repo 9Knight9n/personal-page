@@ -1,9 +1,17 @@
 
 .right-panel{
-    @apply bg-secondary text-white ;
-    display: flex;
-    flex-direction: column;
-    article:first-child{
-        @apply bg-primary;
+    @apply w-80 flex flex-col h-full;
+    article{
+        @apply p-4;
     }
+    article:first-child{
+        @apply bg-primary flex flex-col items-center;
+    }
+    article:not(:first-child):not(:last-child){
+        @apply bg-secondary grow;
+    }
+    article:last-child{
+        @apply bg-primary flex flex-row justify-center;
+    }
+
 }

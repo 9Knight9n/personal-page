@@ -1,9 +1,6 @@
 <?php
 echo "
-<section class='right-panel '>
-    <article>
-        hello
-    </article>
+<section class='right-panel'>
     <article>
         hello
     </article>

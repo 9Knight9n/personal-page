@@ -1,13 +1,13 @@
-@import "theme/variables";
+@import "reusable/variables";
 
 @import "tailwindcss/base";
-@import "./theme/custom-base-styles.scss";
+@import "reusable/custom-base-styles.scss";
 
 @import "tailwindcss/components";
-@import "./theme/custom-components.scss";
+@import "reusable/custom-components.scss";
 
 @import "tailwindcss/utilities";
-@import "./theme/custom-utilities.scss";
+@import "reusable/custom-utilities.scss";
 
 
 

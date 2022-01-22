@@ -1,0 +1,23 @@
+.bg-primary {
+    background-color: $primary-color;
+}
+.bg-secondary {
+    background-color: $secondary-color;
+}
+.bg-tertiary {
+    background-color: $tertiary-color;
+}
+
+.text-primary {
+    color: $primary-text-color;
+}
+.text-secondary {
+    background-color: $secondary-text-color;
+}
+.text-tertiary {
+    background-color: $tertiary-text-color;
+}
+
+.single-page{
+    @apply h-screen w-screen ;
+}
