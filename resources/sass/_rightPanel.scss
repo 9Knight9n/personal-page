@@ -1,0 +1,9 @@
+
+.right-panel{
+    @apply bg-secondary text-white ;
+    display: flex;
+    flex-direction: column;
+    article:first-child{
+        @apply bg-primary;
+    }
+}

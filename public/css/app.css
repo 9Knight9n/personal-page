@@ -1,4 +1,3 @@
-
 /*
 ! tailwindcss v3.0.15 | MIT License | https://tailwindcss.com
 *//*
@@ -425,6 +424,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
 }
+.bg-primary {
+  background-color: #475569;
+}
+
+.bg-secondary {
+  background-color: #334155;
+}
+
+.bg-tertiary {
+  background-color: #1e293b;
+}
 .fixed {
   position: fixed;
 }
@@ -628,6 +638,16 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+}
+.right-panel {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+  background-color: #334155;
+  display: flex;
+  flex-direction: column;
+}
+.right-panel article:first-child {
+  background-color: #475569;
 }
 .hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;

@@ -1,1 +1,21 @@
+@import "theme/variables";
+
+@import "tailwindcss/base";
+@import "./theme/custom-base-styles.scss";
+
+@import "tailwindcss/components";
+@import "./theme/custom-components.scss";
+
+@import "tailwindcss/utilities";
+@import "./theme/custom-utilities.scss";
+
+
+
+@import "rightPanel";
+
+
+
+
+
+
 
