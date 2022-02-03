@@ -21,7 +21,7 @@
         const Scrollbar = window.Scrollbar;
 
         Scrollbar.initAll({
-            speed:1.2,
+            // speed:1.2,
             damping:0.08,
             // alwaysShowTracks:true,
             // continuousScrolling:true

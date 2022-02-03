@@ -488,11 +488,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) article:nth-child(7) h6, .right-panel > article:first-child h3 {
+.text-secondary, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3 {
   color: #8C8C8E;
 }
 
-.text-tertiary, .right-panel > article:not(:first-child):not(:last-child) article:nth-child(7) i {
+.text-tertiary, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) i {
   color: #FFC107;
 }
 
@@ -784,33 +784,36 @@ h6 {
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(3) .circular-progress-bar {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(3) .circular-progress-bar {
   width: 100%;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(3) > div {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(3) > div {
   width: 33.333333%;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(3) h6 {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(3) h6 {
   width: 33.333333%;
   text-align: center;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(5) > article {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(5) > article {
   width: 100%;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(7) div {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) div {
   margin-top: 0.25rem;
   margin-bottom: 0.25rem;
   display: flex;
   width: 100%;
   flex-direction: row-reverse;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(7) h6 {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6 {
   text-align: end;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(7) i {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) i {
   margin-left: 0.5rem;
 }
-.right-panel > article:not(:first-child):not(:last-child) article:nth-child(9) a {
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) {
+  padding-bottom: 1.5rem;
+}
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a {
   margin-top: 0.5rem;
   width: 100%;
   font-size: 0.875rem;
@@ -930,7 +933,8 @@ h6 {
   }
 }
 @font-face {
-    src: url(/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2?bb913d24dc1414ef1f10951d90409ccc) , url(/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].ttf?a1ac1303ab019b4e0125cfcbefbe2532);
+    src: url(/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2?bb913d24dc1414ef1f10951d90409ccc) ;
+    /*src: url("../assets/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].ttf");*/
     font-family: "mikhak";
 }
 
