@@ -1,0 +1,16 @@
+@import "variables";
+
+.linear-progress-bar{
+    @apply rounded-lg w-full block pb-6 ;
+    > div{
+        @apply w-full h-1 rounded-full mt-1;
+        background-color: $tertiary-color;
+        > div[role="progressbar"]{
+            @apply h-full rounded-full;
+            --pgPercentage: var(--value);
+            animation: growProgressBar 3s 1 forwards;
+            width: calc(var(--pgPercentage) * 1%);
+            background-color: $hover-text-color;
+        }
+    }
+}

@@ -18,6 +18,7 @@ mix.webpackConfig({
 });
 
 mix.js('resources/js/app.js', 'public/js')
+    .copyDirectory('resources/assets/fonts', 'public/fonts')
     .postCss("resources/css/app.css", "public/css", [
         require("tailwindcss"),
     ])

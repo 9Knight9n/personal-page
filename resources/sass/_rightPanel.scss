@@ -1,17 +1,107 @@
 
 .right-panel{
-    @apply w-80 flex flex-col h-full;
-    article{
-        @apply p-4;
+    @apply w-72 flex flex-col h-full;
+    > article{
+        @apply py-3 px-7;
     }
-    article:first-child{
-        @apply bg-primary flex flex-col items-center;
+    > article:first-child{
+        @apply bg-primary flex flex-col items-center relative pb-7;
+        img {
+            @apply h-24 w-24 rounded-full ring-2 ring-white ;
+            object-fit: cover;
+        }
+        span{
+            @apply absolute ml-20 w-6 h-6 bg-red-600 rounded-full;
+            margin-top: 4.5rem;
+        }
+        h3{
+            @extend .text-secondary ;
+            @apply mt-0.5;
+        }
+        span + h3 {
+            @extend .text-primary-bold , .text-primary-bold-hover , .text-primary;
+            @apply  mt-2 mb-1 ;
+        }
     }
-    article:not(:first-child):not(:last-child){
+    > article:not(:first-child):not(:last-child){
         @apply bg-secondary grow;
-    }
-    article:last-child{
-        @apply bg-primary flex flex-row justify-center;
-    }
+        overflow-y: auto;
+        article {
+            display: flex;
+            flex-direction: row-reverse;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
 
+        article:nth-child(3){
+            .circular-progress-bar{
+                @apply w-full;
+            }
+            > div {
+                @apply w-1/3;
+            }
+            h6 {
+                @apply w-1/3 text-center;
+            }
+        }
+
+        article:nth-child(5){
+            > article{
+                @apply w-full;
+            }
+        }
+
+        article:nth-child(7){
+            div{
+                @apply w-full my-1 flex flex-row-reverse;
+            }
+            h6{
+                @extend .text-secondary;
+                text-align: end;
+            }
+            i{
+                @extend .text-tertiary;
+                @apply ml-2;
+            }
+        }
+
+        article:nth-child(9){
+            a{
+                @apply text-sm mt-2 w-full;
+                @extend .text-secondary;
+                text-align: end;
+            }
+        }
+
+        hr {
+            @apply mt-5 border-stone-500;
+        }
+
+        h5 {
+            @extend .text-primary ;
+            @apply w-full my-5;
+            text-align: end;
+        }
+    }
+    > article:last-child{
+        @apply bg-primary flex flex-row justify-center;
+        a{
+            @extend .text-secondary;
+            @apply mx-2 ;
+        }
+    }
 }
+
+.duos-text{
+    h6 {
+        @apply w-2/4 mb-1;
+    }
+    h6:nth-child(odd){
+        text-align: end;
+        @extend .text-primary;
+    }
+    h6:nth-child(even){
+        @extend .text-secondary;
+    }
+}
+

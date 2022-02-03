@@ -1,0 +1,9 @@
+@font-face {
+    src: url("../assets/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2") , url("../assets/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].ttf");
+    font-family: "mikhak";
+}
+
+
+body{
+    font-family: 'mikhak', serif;
+}

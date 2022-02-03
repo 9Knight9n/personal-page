@@ -1,6 +1,17 @@
-$primary-color : rgb(71 85 105);
-$secondary-color : rgb(51 65 85);
-$tertiary-color : rgb(30 41 59);
+$primary-color : linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+$secondary-color : #20202A;
+$tertiary-color : #191923;
 $primary-text-color : #FFFFFF;
 $secondary-text-color : #8C8C8E;
-$tertiary-text-color : #FFC107;
+$hover-text-color : #FFC107;
+
+@keyframes growProgressBar {
+    0%, 33% { --pgPercentage: 0; }
+    100% { --pgPercentage: var(--value); }
+}
+
+@property --pgPercentage {
+    syntax: '<number>';
+    inherits: false;
+    initial-value: 0;
+}

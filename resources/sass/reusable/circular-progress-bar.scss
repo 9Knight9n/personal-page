@@ -1,0 +1,24 @@
+@import "variables";
+
+
+.circular-progress-bar[role="progressbar"] {
+    @apply px-2 mb-3;
+    --size: 25%;
+    --pgPercentage: var(--value);
+    animation: growProgressBar 3s 1 forwards;
+    width: var(--size);
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    background:
+        radial-gradient(closest-side, $secondary-color 85%, transparent 0 99.9%, $secondary-color 0),
+        conic-gradient($hover-text-color calc(var(--pgPercentage) * 1%), $tertiary-color 0);
+    color: $secondary-text-color;
+}
+
+.circular-progress-bar[role="progressbar"]::before {
+    counter-reset: percentage var(--value);
+    content: counter(percentage) '%';
+}
+
