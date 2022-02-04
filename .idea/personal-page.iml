@@ -121,7 +121,5 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="all" level="application" />
-    <orderEntry type="library" name="smooth-scrollbar" level="application" />
   </component>
 </module>

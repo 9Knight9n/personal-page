@@ -166,7 +166,9 @@ echo "
         <hr>
         <article>
             <a href='#'>
+                <i class='fas fa-download'></i>
                 دانلود رزومه
+
             </a>
         </article>
     </article>

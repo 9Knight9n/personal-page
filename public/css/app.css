@@ -461,6 +461,161 @@ Ensure the default browser behavior of the `hidden` attribute.
   background-color: #FFC107;
 }
 
+.responsive-sidebar.drawer {
+  display: grid;
+  overflow: hidden;
+}
+
+.responsive-sidebar.drawer.drawer-end {
+  direction: rtl;
+}
+
+.responsive-sidebar.drawer.drawer-end > * {
+  direction: ltr;
+}
+
+.responsive-sidebar.drawer.drawer-end .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+  justify-self: end;
+  --tw-translate-x: 100%;
+}
+
+.responsive-sidebar.drawer.drawer-end .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
+  --tw-translate-x: 0px;
+}
+
+.responsive-sidebar .drawer-toggle {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  height: 0;
+  opacity: 0;
+  position: absolute;
+  width: 0;
+}
+.responsive-sidebar .drawer-toggle ~ .drawer-content {
+  max-height: 100vh;
+  overflow-y: auto;
+  z-index: 0;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  -ms-scroll-chaining: none;
+  overscroll-behavior: contain;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.responsive-sidebar .drawer-toggle ~ .drawer-side {
+  display: grid;
+  max-height: 100vh;
+  grid-column-start: 1;
+  grid-row-start: 1;
+}
+.responsive-sidebar .drawer-toggle ~ .drawer-side > .drawer-overlay {
+  opacity: 0;
+  visibility: hidden;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  --tw-bg-opacity: 1;
+  background-color: hsla(var(--nf)/var(--tw-bg-opacity, 1));
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.responsive-sidebar .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+  z-index: 10;
+  grid-column-start: 1;
+  grid-row-start: 1;
+  --tw-translate-x: -100%;
+  --tw-translate-y: 0;
+  --tw-rotate: 0;
+  --tw-skew-x: 0;
+  --tw-skew-y: 0;
+  --tw-scale-x: 1;
+  --tw-scale-y: 1;
+  transform: translateX(var(--tw-translate-x)) translateY(var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.responsive-sidebar .drawer-toggle:checked ~ .drawer-side {
+  overflow-y: auto;
+}
+.responsive-sidebar .drawer-toggle:checked ~ .drawer-side > .drawer-overlay {
+  visibility: visible;
+  opacity: 0.999999;
+  --tw-bg-opacity: 0.4;
+}
+.responsive-sidebar .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
+  --tw-translate-x: 0px;
+}
+.responsive-sidebar [dir=rtl] .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+  --tw-translate-x: 100%;
+}
+.responsive-sidebar [dir=rtl] .drawer-toggle:checked ~ .drawer-side > .drawer-overlay + * {
+  --tw-translate-x: 0px;
+}
+
+@media (min-width: 1024px) {
+  .responsive-sidebar.drawer-mobile {
+    grid-auto-columns: -webkit-max-content auto;
+    grid-auto-columns: max-content auto;
+  }
+
+  .responsive-sidebar.drawer-mobile > .drawer-toggle ~ .drawer-content {
+    height: auto;
+  }
+
+  .responsive-sidebar.drawer-mobile > .drawer-toggle ~ .drawer-content {
+    grid-column-start: 2;
+  }
+
+  .responsive-sidebar.drawer-mobile > .drawer-toggle ~ .drawer-side > .drawer-overlay {
+    visibility: visible;
+  }
+
+  .responsive-sidebar.drawer-mobile > .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+    --tw-translate-x: 0px;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-content {
+    grid-column-start: 1;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-side {
+    grid-column-start: 2;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-side > .drawer-overlay {
+    visibility: visible;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-side > .drawer-overlay + * {
+    --tw-translate-x: 0px;
+  }
+
+  .responsive-sidebar.drawer-mobile > .drawer-toggle ~ .drawer-side {
+    overflow-y: auto;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end {
+    grid-auto-columns: auto -webkit-max-content;
+    grid-auto-columns: auto max-content;
+    direction: ltr;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-content {
+    height: auto;
+  }
+
+  .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-side {
+    overflow-y: auto;
+  }
+
+  .responsive-sidebar.drawer-mobile > .drawer-toggle:checked ~ .drawer-content {
+    --tw-translate-x: 0px;
+  }
+}
 .bg-primary {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
 }
@@ -469,7 +624,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #20202A;
 }
 
-.bg-tertiary {
+.bg-tertiary, .drawer-content {
   background: #191923;
 }
 
@@ -532,6 +687,9 @@ h6 {
   margin-left: auto;
   margin-right: auto;
 }
+.mb-4 {
+  margin-bottom: 1rem;
+}
 .ml-1 {
   margin-left: 0.25rem;
 }
@@ -568,6 +726,9 @@ h6 {
 .hidden {
   display: none;
 }
+.h-screen {
+  height: 100vh;
+}
 .h-5 {
   height: 1.25rem;
 }
@@ -579,6 +740,9 @@ h6 {
 }
 .min-h-screen {
   min-height: 100vh;
+}
+.w-80 {
+  width: 20rem;
 }
 .w-5 {
   width: 1.25rem;
@@ -595,6 +759,9 @@ h6 {
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
+.flex-col {
+  flex-direction: column;
+}
 .items-center {
   align-items: center;
 }
@@ -603,6 +770,9 @@ h6 {
 }
 .overflow-hidden {
   overflow: hidden;
+}
+.overflow-y-auto {
+  overflow-y: auto;
 }
 .rounded-full {
   border-radius: 9999px;
@@ -625,6 +795,9 @@ h6 {
 .bg-sky-500 {
   --tw-bg-opacity: 1;
   background-color: rgb(14 165 233 / var(--tw-bg-opacity));
+}
+.p-4 {
+  padding: 1rem;
 }
 .p-6 {
   padding: 1.5rem;
@@ -726,7 +899,7 @@ h6 {
 }
 .right-panel {
   display: flex;
-  height: 100%;
+  height: 100vh;
   width: 18rem;
   flex-direction: column;
 }
@@ -819,6 +992,9 @@ h6 {
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-align: end;
+}
+.right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a i:before {
+  font-size: smaller;
 }
 .right-panel > article:not(:first-child):not(:last-child) hr {
   margin-top: 1.25rem;
@@ -927,6 +1103,9 @@ h6 {
   }
 }
 @media (min-width: 1024px) {
+  .lg\:hidden {
+    display: none;
+  }
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;

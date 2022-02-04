@@ -10,7 +10,7 @@
 <body class="single-page">
 
     <?php
-        require "./components/about-me.php";
+        require "./components/responsive-sidebar.php";
     ?>
 
 <!--    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.min.js" integrity="sha512-uTuRVg2sX1/cMtqmqW82QpIDCgeDKPeBddz928F4aPJgUWfdiU0GycmSgXBfQhKDy+K1SPYC/72NaNJdCnqeWw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>-->

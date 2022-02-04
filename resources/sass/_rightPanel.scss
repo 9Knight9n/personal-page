@@ -1,6 +1,6 @@
 
 .right-panel{
-    @apply w-72 flex flex-col h-full;
+    @apply w-72 flex flex-col h-screen;
     > article{
         @apply py-3 px-7;
     }
@@ -72,6 +72,9 @@
                     @apply text-sm mt-2 w-full;
                     @extend .text-secondary;
                     text-align: end;
+                    i:before{
+                        font-size: smaller;
+                    }
                 }
             }
         }
