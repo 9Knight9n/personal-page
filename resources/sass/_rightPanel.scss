@@ -1,5 +1,8 @@
 
 .right-panel{
+    @media (min-width:1024px){
+        @apply h-full;
+    }
     @apply w-72 flex flex-col h-screen;
     > article{
         @apply py-3 px-7;

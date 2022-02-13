@@ -125,6 +125,7 @@
 
     .responsive-sidebar.drawer-mobile.drawer-end>.drawer-toggle~.drawer-side {
         grid-column-start: 2;
+        display: flex;
     }
 
     .responsive-sidebar.drawer-mobile.drawer-end>.drawer-toggle~.drawer-side>.drawer-overlay {
@@ -153,8 +154,5 @@
     }
 }
 
-.drawer-content{
-    @extend .bg-tertiary;
-}
 
 

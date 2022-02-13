@@ -584,6 +584,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 
   .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-side {
     grid-column-start: 2;
+    display: flex;
   }
 
   .responsive-sidebar.drawer-mobile.drawer-end > .drawer-toggle ~ .drawer-side > .drawer-overlay {
@@ -624,7 +625,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #20202A;
 }
 
-.bg-tertiary, .drawer-content {
+.bg-tertiary, .single-page {
   background: #191923;
 }
 
@@ -737,6 +738,9 @@ h6 {
 }
 .h-16 {
   height: 4rem;
+}
+.h-full {
+  height: 100%;
 }
 .min-h-screen {
   min-height: 100vh;
@@ -903,6 +907,11 @@ h6 {
   width: 18rem;
   flex-direction: column;
 }
+@media (min-width: 1024px) {
+  .right-panel {
+    height: 100%;
+  }
+}
 .right-panel > article {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
@@ -1024,6 +1033,19 @@ h6 {
 }
 .duos-text h6:nth-child(odd) {
   text-align: end;
+}
+@media (min-width: 1024px) {
+  .single-page {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+  .single-page {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+  }
+  .single-page {
+    box-sizing: border-box;
+  }
 }
 .hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;
