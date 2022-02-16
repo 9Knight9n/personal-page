@@ -629,7 +629,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 100%;
   justify-content: flex-end;
 }
-.sidebar i {
+.sidebar label i, .sidebar > i {
   width: 5rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -677,6 +677,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   line-height: 1.25rem;
   text-align: right;
 }
+.sidebar li i {
+  transition: transform 0.3s;
+}
+.sidebar li:hover > i {
+  --tw-rotate: -90deg;
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 
 .drawer-toggle {
   -webkit-appearance: none;
@@ -705,6 +712,12 @@ Ensure the default browser behavior of the `hidden` attribute.
 .sidebar ~ .sidebar-dim {
   height: 100%;
   width: 100%;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
+  opacity: 0.6;
 }
 
 .changing-icon {
@@ -757,7 +770,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .sidebar i, .sidebar div span, .sidebar li {
+.text-secondary, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .sidebar label i, .sidebar > i, .sidebar div span, .sidebar li {
   color: #8C8C8E;
 }
 
@@ -890,6 +903,9 @@ h6 {
 }
 .justify-center {
   justify-content: center;
+}
+.justify-between {
+  justify-content: space-between;
 }
 .overflow-hidden {
   overflow: hidden;
@@ -1157,6 +1173,19 @@ h6 {
 .duos-text h6:nth-child(odd) {
   text-align: end;
 }
+.home {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+}
+.home .briefing {
+  margin-top: 6rem;
+  height: 24rem;
+  width: 100%;
+  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
+}
+
 @media (min-width: 1024px) {
   .single-page {
     padding-left: 3rem;
@@ -1170,10 +1199,12 @@ h6 {
     box-sizing: border-box;
   }
 }
+
 .hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
+
 @media (prefers-color-scheme: dark) {
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
@@ -1200,6 +1231,7 @@ h6 {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
+
 @media (min-width: 640px) {
   .sm\:ml-0 {
     margin-left: 0px;
@@ -1236,6 +1268,7 @@ h6 {
     text-align: right;
   }
 }
+
 @media (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1247,6 +1280,7 @@ h6 {
     border-left-width: 1px;
   }
 }
+
 @media (min-width: 1024px) {
   .lg\:hidden {
     display: none;

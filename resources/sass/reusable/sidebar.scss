@@ -6,7 +6,7 @@
         @apply w-full flex justify-end;
         @extend .bg-primary
     }
-    i{
+    label i,>i{
         @extend .text-secondary ;
         @apply py-7 w-20 text-center;
         position: relative;
@@ -56,6 +56,12 @@
         text-align:right;
 
     }
+    li i{
+        transition:transform 0.3s;
+    }
+    li:hover>i{
+        @apply -rotate-90;
+    }
 
 }
 .drawer-toggle {
@@ -83,5 +89,9 @@
 
 }
 .sidebar~.sidebar-dim{
-    @apply w-full h-full;
+    @apply px-10 w-full h-full;
+}
+.drawer-toggle:checked~.sidebar~.sidebar-dim{
+    opacity:0.6;
+
 }

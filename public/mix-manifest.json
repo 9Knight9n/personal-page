@@ -4,5 +4,7 @@
     "/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2": "/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2",
     "/fonts/Mikhak-VF[wght,KSHD,DSTY].ttf": "/fonts/Mikhak-VF[wght,KSHD,DSTY].ttf",
     "/fonts/Mikhak-VF[wght,KSHD,DSTY].woff2": "/fonts/Mikhak-VF[wght,KSHD,DSTY].woff2",
-    "/fonts/Vazir-Regular.ttf": "/fonts/Vazir-Regular.ttf"
+    "/fonts/Vazir-Regular.ttf": "/fonts/Vazir-Regular.ttf",
+    "/static/bg-1.jpg": "/static/bg-1.jpg",
+    "/static/face-2.png": "/static/face-2.png"
 }

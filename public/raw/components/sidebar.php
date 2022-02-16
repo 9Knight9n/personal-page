@@ -24,8 +24,11 @@
         <li class="open-bar" style="--n: 0s;">
             خانه
         </li>
-        <li class="open-bar" style="--n: 0.1s;">
-            نمونه کار
+        <li class="open-bar justify-between flex" style="--n: 0.1s">
+            <i class="fas fa-angle-left"></i>
+            <span>
+                نمونه کار
+            </span>
         </li>
         <li class="open-bar" style="--n: 0.2s;">
             تاریخچه
@@ -33,8 +36,11 @@
         <li class="open-bar" style="--n: 0.3s;">
             فروشگاه
         </li>
-        <li class="open-bar" style="--n: 0.4s;">
-            بلاگ
+        <li class="open-bar justify-between flex" style="--n: 0.4s;">
+            <i class="fas fa-angle-left"></i>
+            <span>
+                بلاگ
+            </span>
         </li>
         <li class="open-bar" style="--n: 0.5s;">
             تماس با من
@@ -43,7 +49,4 @@
             خانه تک صفحه
         </li>
     </ul>
-</div>
-<div class="sidebar-dim">
-
 </div>

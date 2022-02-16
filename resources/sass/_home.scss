@@ -1,0 +1,7 @@
+.home{
+    @apply flex flex-col w-full h-full;
+    .briefing{
+        @apply w-full h-96 mt-24;
+        background-image:url(../assets/image/bg-1.jpg)
+    }
+}
