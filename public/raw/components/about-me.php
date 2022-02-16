@@ -85,7 +85,7 @@ echo "
                 </h6>
                 <div class='linear-progress-bar'>
                     <div>
-                        <div role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100' style='--value:90'>
+                        <div role='progressbar' aria-valuenow='95' aria-valuemin='0' aria-valuemax='100' style='--value:95'>
                         </div>
                     </div>
                 </div>
@@ -99,7 +99,7 @@ echo "
                 </h6>
                 <div class='linear-progress-bar'>
                     <div>
-                        <div role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100' style='--value:90'>
+                        <div role='progressbar' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100' style='--value:75'>
                         </div>
                     </div>
                 </div>
@@ -113,7 +113,7 @@ echo "
                 </h6>
                 <div class='linear-progress-bar'>
                     <div>
-                        <div role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100' style='--value:90'>
+                        <div role='progressbar' aria-valuenow='65' aria-valuemin='0' aria-valuemax='100' style='--value:65'>
                         </div>
                     </div>
                 </div>
@@ -127,7 +127,7 @@ echo "
                 </h6>
                 <div class='linear-progress-bar'>
                     <div>
-                        <div role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100' style='--value:90'>
+                        <div role='progressbar' aria-valuenow='85' aria-valuemin='0' aria-valuemax='100' style='--value:85'>
                         </div>
                     </div>
                 </div>

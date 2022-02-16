@@ -1,0 +1,24 @@
+.changing-icon{
+    position:relative;
+    i{
+        transition:opacity 0.5s,transform 0.5s;
+    }
+    i:first-child{
+        position:absolute;
+
+    }
+    i:last-child{
+        transform:rotate(-180deg) scale(0.5);
+        opacity:0;
+    }
+}
+.drawer-toggle:checked~.sidebar .changing-icon{
+    i:first-child{
+        transform:rotate(180deg) scale(0.5);
+        opacity:0;
+    }
+    i:last-child{
+        transform:rotate(0deg) scale(1);
+        opacity:1;
+    }
+}

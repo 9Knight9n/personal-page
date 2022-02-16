@@ -1,0 +1,87 @@
+.sidebar{
+    @extend .bg-secondary;
+    @apply w-20 flex flex-col items-center;
+    transition: width 0.75s;
+    label{
+        @apply w-full flex justify-end;
+        @extend .bg-primary
+    }
+    i{
+        @extend .text-secondary ;
+        @apply py-7 w-20 text-center;
+        position: relative;
+    }
+
+    i>span{
+        position: absolute;
+        top:1rem;
+    }
+
+    i span button {
+        background-color: $hover-text-color;
+    }
+
+    i span button span {
+        @apply text-black;
+    }
+
+    div {
+        @apply h-96 flex items-end mb-24;
+
+    }
+    div span{
+        @extend .text-secondary ;
+        transform: rotate(90deg);
+    }
+
+
+    .open-bar{
+        position:relative;
+        width:100%;
+        right:300px;
+        transition-delay: 0s;
+    }
+
+    ul{
+        position:relative;
+        display: flex;
+        flex-direction: column;
+        @apply w-full h-full px-6 ;
+        justify-content:center;
+    }
+
+    li{
+        @extend .text-secondary ;
+        @apply text-sm ;
+        text-align:right;
+
+    }
+
+}
+.drawer-toggle {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 0;
+    opacity: 0;
+    position: absolute;
+    width: 0;
+}
+
+.drawer-toggle:checked~.sidebar{
+    @apply w-60;
+    .close-bar {
+        display: none;
+    }
+
+    .open-bar{
+        right:0;
+        transition:right 1s;
+        transition-delay: var(--n);
+        @apply py-2;
+    }
+
+}
+.sidebar~.sidebar-dim{
+    @apply w-full h-full;
+}
