@@ -1,8 +1,8 @@
-<div class="h-full w-full" style="display: flex;">
+<div class="h-full w-full" style="display: flex; overflow-y: hidden">
     <?php
         require "sidebar.php";
     ?>
-    <div class="sidebar-dim ">
+    <div class="sidebar-dim">
         <?php
             require "home.php";
         ?>

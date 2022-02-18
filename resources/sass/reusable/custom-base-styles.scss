@@ -57,3 +57,34 @@ h6{
     background: #FF0000;
 }
 
+.article-title{
+    @extend .text-primary;
+    @apply font-bold text-xl text-right;
+}
+
+.card {
+    @extend .bg-primary;
+    @apply shadow-2xl p-7;
+}
+
+.card-title{
+    @extend .text-primary;
+    @apply font-bold text-lg text-right;
+}
+
+.show-more{
+    @extend .text-tertiary;
+    @apply text-right text-sm;
+    &:hover {
+        text-shadow: #ffffff 1px 0 5px;
+    }
+    >i{
+        @apply mr-2;
+        position: relative;
+        transition: left 0.5s;
+        left: 0;
+    }
+    &:hover>i{
+        left: -10px;
+    }
+}

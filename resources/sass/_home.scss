@@ -4,4 +4,48 @@
         @apply w-full h-96 mt-24;
         background-image:url(../assets/image/bg-1.jpg)
     }
+    .services{
+        @apply mt-12 flex flex-col;
+        > h5 {
+            @extend .article-title;
+        }
+        > div {
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6;
+            direction: rtl;
+            > article {
+                @extend .card;
+                h5{
+                    @extend .card-title;
+                }
+                h6{
+                    @extend .text-secondary;
+                    @apply text-right my-3;
+                }
+                a{
+                    @extend .show-more;
+                }
+            }
+        }
+    }
+
+    .pricing{
+        @apply mt-12 flex flex-col;
+        > h5 {
+            @extend .article-title;
+        }
+        > div {
+            @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-6;
+            direction: rtl;
+            > article {
+                @extend .card;
+                @apply flex flex-col items-center;
+                h5{
+                    @extend .card-title;
+                }
+                a{
+                    @extend .show-more;
+                }
+            }
+        }
+    }
 }
