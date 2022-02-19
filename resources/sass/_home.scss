@@ -1,8 +1,9 @@
 .home{
     @apply flex flex-col w-full h-full;
+    position: relative;
     .briefing{
         @apply w-full h-96 mt-24;
-        background-image:url(../assets/image/bg-1.jpg)
+        background-image:url(../assets/image/bg-1.jpg);
     }
     .services{
         @apply mt-12 flex flex-col;
@@ -42,10 +43,85 @@
                 h5{
                     @extend .card-title;
                 }
+                >h6{
+                    @apply text-sm my-6;
+                    span{
+                        @extend .text-tertiary;
+                        @apply text-4xl font-bold;
+                    }
+                }
+                >span{
+                    @apply text-sm mb-4;
+                    @extend .text-secondary;
+                    i{
+                        @apply ml-1;
+                        @extend .text-tertiary;
+                        font-size: 0.65rem;
+                    }
+                }
+                >span.not-check{
+                    opacity: 0.5;
+                }
                 a{
                     @extend .show-more;
+                    @apply mt-3;
                 }
             }
+        }
+    }
+
+    .feedback{
+        @apply mt-12 flex flex-col;
+        > h5 {
+            @extend .article-title;
+            @apply mb-3;
+        }
+        .splide__slide{
+            @apply w-1/2;
+
+            >div{
+                @apply m-5 relative;
+                @extend .card;
+                > a{
+                    @apply block absolute;
+                    left: 30px;
+                    top: -15px;
+                }
+                >h5{
+                    @extend .card-title;
+                }
+                >h6{
+                    @apply text-xs mt-2;
+                    @extend .text-secondary;
+                }
+                >p{
+                    @apply text-sm mt-4;
+                    @extend .text-secondary;
+                }
+                >div{
+                    @extend .bg-tertiary;
+                    @apply rounded-full px-4 mt-4;
+                    width: fit-content;
+                    i{
+                        @extend .text-tertiary;
+                        @apply text-xs my-2;
+                    }
+                }
+            }
+        }
+
+    }
+    .cooperation{
+        @apply flex justify-between my-5 mx-10;
+    }
+    .footer{
+        @extend .bg-primary;
+        @apply w-full flex justify-between;
+        position: relative;
+        bottom: 0;
+        h5{
+            @extend .text-secondary;
+            @apply text-sm text-right mx-5 my-5;
         }
     }
 }

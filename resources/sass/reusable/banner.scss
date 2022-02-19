@@ -1,0 +1,27 @@
+@import "variables";
+.banner{
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 70px;
+    >div{
+        transform: rotate(-45deg);
+        height: 20px;
+        width: 100px;
+        position: absolute;
+        left: -21px;
+        top: 17px;
+        background-color: $hover-text-color;
+        p{
+            @apply text-xs font-bold;
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+}

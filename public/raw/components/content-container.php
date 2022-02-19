@@ -3,9 +3,12 @@
         require "sidebar.php";
     ?>
     <div class="sidebar-dim">
-        <?php
+        <div class="px-10 w-full h-full" style="background-color: #191923F2">
+            <?php
             require "home.php";
-        ?>
+            ?>
+        </div>
+
 <!--        <article>-->
 <!--            <img src="../../static/bg-1.jpg">-->
 <!--        </article>-->

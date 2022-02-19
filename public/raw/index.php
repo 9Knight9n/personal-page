@@ -5,6 +5,7 @@
     <title>Personal page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.css" integrity="sha512-YihuVdpo+ob7zhdbVJXGqGU/yHvY1N8J/kuC7cFvM9cXja+Q5XYGeQMbwBJsTWuez41tKxrJMukmu+lckvD7IQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/css/themes/splide-default.min.css" crossorigin="anonymous"/>
     <link href="../css/app.css" rel="stylesheet">
 </head>
 <body class="single-page">
@@ -30,7 +31,20 @@
     </script>
 
 
-<!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.min.js' id='smooth-scrollbar-js'></script>-->
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script>
+        var splide = new Splide( '.splide', {
+            // type   : 'loop',
+            perPage: 2,
+            perMove: 1,
+            autoWidth: true,
+            // height   : '10rem',
+            direction: 'rtl',
+        } );
+
+        splide.mount();
+    </script>
+    <!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.min.js' id='smooth-scrollbar-js'></script>-->
 <!--<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/plugins/overscroll.min.js' id='overscroll-js'></script>-->
 </body>
 </html>

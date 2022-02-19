@@ -4,6 +4,7 @@
 @import "./responsive-sidebar.scss";
 @import "./sidebar.scss";
 @import "./changing-icon.scss";
+@import "./banner.scss";
 
 .bg-primary {
     background: $primary-color;
@@ -64,7 +65,7 @@ h6{
 
 .card {
     @extend .bg-primary;
-    @apply shadow-2xl p-7;
+    @apply shadow-lg p-7;
 }
 
 .card-title{
