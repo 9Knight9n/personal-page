@@ -1,7 +1,56 @@
 <section class="home">
     <article class="briefing">
+        <article>
+            <section>
+            </section>
+            <div>
+                <img src="../../static/face-2 (1).png">
+                <div>
+                    <h1>
+                        رزومه و نمونه کارهای من را
+                        مشاهده کنید!
+                    </h1>
+                    <h6>
+                        <
+                        <span>
+                            کد
+                        </span>
+                        >
+                        مهارت در ساخت
+                        <span id="typing-text"></span>
+                        < /
+                        <span>
+                            کد
+                        </span>
+                        >
 
+                    </h6>
+                    <button>
+                        مشاهده نمونه کارها
+                    </button>
+                </div>
+            </div>
+        </article>
+        <div>
+            <div class="counter">
+                <div style='--value:10'>+</div>
+                سال تجربه کاری
+            </div>
+            <div class="counter">
+                <div style='--value:143'></div>
+                پروژه انجام شده
+            </div>
+            <div class="counter">
+                <div style='--value:114'></div>
+                مشتری رضایتمند
+            </div>
+            <div class="counter">
+                <div style='--value:20'>+</div>
+                جوایز و دستاوردها
+            </div>
+        </div>
     </article>
+
     <article class="services">
         <h5>
             خدمات ما
@@ -208,6 +257,7 @@
             </article>
         </div>
     </article>
+
     <article class="feedback">
         <h5>
             نظرات کاربران
@@ -311,12 +361,14 @@
             </div>
         </div>
     </article>
+
     <article class="cooperation">
         <img src="../../static/brand-1-1.png">
         <img src="../../static/brand-2-1.png">
         <img src="../../static/brand-3-1.png">
         <img src="../../static/brand-1-1 (1).png">
     </article>
+
     <footer class="footer">
         <h5>
             <a>

@@ -90,8 +90,7 @@
 }
 .sidebar~.sidebar-dim{
     @apply w-full h-full;
-    overflow-y: auto;
-    background-image: url(../../assets/image/bg-1.jpg);
+    overflow-y: hidden;
 
 }
 .drawer-toggle:checked~.sidebar~.sidebar-dim{

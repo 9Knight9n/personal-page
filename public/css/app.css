@@ -712,8 +712,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .sidebar ~ .sidebar-dim {
   height: 100%;
   width: 100%;
-  overflow-y: auto;
-  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
+  overflow-y: hidden;
 }
 
 .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
@@ -792,11 +791,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #20202A;
 }
 
-.bg-tertiary, .single-page, .home .feedback .splide__slide > div > div {
+.bg-tertiary, .single-page, .home .feedback .splide__slide > div > div, .home .briefing > article > section {
   background: #191923;
 }
 
-.text-primary, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
+.text-primary, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -815,7 +814,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   color: #8C8C8E;
 }
 
-.text-tertiary, .home .feedback .splide__slide > div > div i, .home .pricing > div > article > span i, .home .pricing > div > article > h6 span, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) i, .show-more, .home .pricing > div > article a, .home .services > div > article a {
+.text-tertiary, .home .feedback .splide__slide > div > div i, .home .pricing > div > article > span i, .home .pricing > div > article > h6 span, .home .briefing > div .counter > div, .home .briefing > article > div > div > h6 > span:not(#typing-text), .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) i, .show-more, .home .pricing > div > article a, .home .services > div > article a {
   color: #FFC107;
 }
 
@@ -881,9 +880,6 @@ h6 {
 .fixed {
   position: fixed;
 }
-.absolute {
-  position: absolute;
-}
 .relative {
   position: relative;
 }
@@ -927,9 +923,6 @@ h6 {
 .-mt-px {
   margin-top: -1px;
 }
-.block {
-  display: block;
-}
 .flex {
   display: flex;
 }
@@ -942,6 +935,9 @@ h6 {
 .h-full {
   height: 100%;
 }
+.h-16 {
+  height: 4rem;
+}
 .h-4 {
   height: 1rem;
 }
@@ -951,20 +947,14 @@ h6 {
 .h-8 {
   height: 2rem;
 }
-.h-16 {
-  height: 4rem;
-}
-.h-40 {
-  height: 10rem;
-}
-.h-20 {
-  height: 5rem;
-}
 .min-h-screen {
   min-height: 100vh;
 }
 .w-full {
   width: 100%;
+}
+.w-16 {
+  width: 4rem;
 }
 .w-4 {
   width: 1rem;
@@ -977,15 +967,6 @@ h6 {
 }
 .w-auto {
   width: auto;
-}
-.w-40 {
-  width: 10rem;
-}
-.w-20 {
-  width: 5rem;
-}
-.w-16 {
-  width: 4rem;
 }
 .max-w-6xl {
   max-width: 72rem;
@@ -1047,6 +1028,10 @@ h6 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
@@ -1062,10 +1047,6 @@ h6 {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1282,6 +1263,83 @@ h6 {
 .duos-text h6:nth-child(odd) {
   text-align: end;
 }
+.counter > div:after {
+  --maxValue: var(--value);
+  content: counter(count);
+  -webkit-animation: counter 3s 1 forwards;
+          animation: counter 3s 1 forwards;
+}
+@-webkit-keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count calc(var(--maxValue) * 0.4);
+  }
+  20% {
+    counter-increment: count calc(var(--maxValue) * 0.6);
+  }
+  30% {
+    counter-increment: count calc(var(--maxValue) * 0.7);
+  }
+  40% {
+    counter-increment: count calc(var(--maxValue) * 0.78);
+  }
+  50% {
+    counter-increment: count calc(var(--maxValue) * 0.84);
+  }
+  60% {
+    counter-increment: count calc(var(--maxValue) * 0.9);
+  }
+  70% {
+    counter-increment: count calc(var(--maxValue) * 0.93);
+  }
+  80% {
+    counter-increment: count calc(var(--maxValue) * 0.96);
+  }
+  90% {
+    counter-increment: count calc(var(--maxValue) * 0.99);
+  }
+  100% {
+    counter-increment: count var(--maxValue);
+  }
+}
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  10% {
+    counter-increment: count calc(var(--maxValue) * 0.4);
+  }
+  20% {
+    counter-increment: count calc(var(--maxValue) * 0.6);
+  }
+  30% {
+    counter-increment: count calc(var(--maxValue) * 0.7);
+  }
+  40% {
+    counter-increment: count calc(var(--maxValue) * 0.78);
+  }
+  50% {
+    counter-increment: count calc(var(--maxValue) * 0.84);
+  }
+  60% {
+    counter-increment: count calc(var(--maxValue) * 0.9);
+  }
+  70% {
+    counter-increment: count calc(var(--maxValue) * 0.93);
+  }
+  80% {
+    counter-increment: count calc(var(--maxValue) * 0.96);
+  }
+  90% {
+    counter-increment: count calc(var(--maxValue) * 0.99);
+  }
+  100% {
+    counter-increment: count var(--maxValue);
+  }
+}
+
 .home {
   display: flex;
   height: 100%;
@@ -1290,10 +1348,119 @@ h6 {
   position: relative;
 }
 .home .briefing {
-  margin-top: 6rem;
+  margin-top: 4rem;
   height: 24rem;
   width: 100%;
+}
+.home .briefing > article {
+  position: relative;
+  display: flex;
+  height: 20rem;
+  width: 100%;
+  justify-content: center;
   background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
+  background-position: center;
+  background-size: 100% auto;
+}
+.home .briefing > article > section {
+  position: absolute;
+  height: 2rem;
+  width: 91.666667%;
+  top: -2rem;
+}
+.home .briefing > article > div {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: row-reverse;
+  --tw-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  background-color: rgba(40, 40, 52, 0.83);
+}
+.home .briefing > article > div > img {
+  position: absolute;
+  width: 0px;
+}
+@media (min-width: 1280px) {
+  .home .briefing > article > div > img {
+    width: auto;
+  }
+}
+.home .briefing > article > div > img {
+  height: calc(100% + 30px);
+  left: 20px;
+  top: -30px;
+}
+.home .briefing > article > div > div {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+  padding: 3rem;
+}
+@media (min-width: 1280px) {
+  .home .briefing > article > div > div {
+    width: 60%;
+  }
+}
+.home .briefing > article > div > div > h1 {
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  direction: rtl;
+}
+.home .briefing > article > div > div > h6 {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 100;
+}
+.home .briefing > article > div > div > h6 #typing-text {
+  margin-left: 0.75rem;
+  margin-right: 0.75rem;
+  padding-left: 0.25rem;
+  border-left: solid 1px white;
+}
+.home .briefing > article > div > div > button {
+  margin-right: 0.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+  font-weight: 700;
+  background-color: #FFC107;
+  justify-self: end;
+}
+.home .briefing > div {
+  margin-top: 1.75rem;
+  display: flex;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+}
+.home .briefing > div .counter {
+  margin-bottom: 1rem;
+  display: flex;
+  width: 50%;
+  flex-direction: row-reverse;
+  align-items: center;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+@media (min-width: 768px) {
+  .home .briefing > div .counter {
+    width: 25%;
+  }
+}
+.home .briefing > div .counter > div {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
 }
 .home .services {
   margin-top: 3rem;
@@ -1462,6 +1629,12 @@ h6 {
   .single-page {
     box-sizing: border-box;
   }
+}
+
+.sidebar ~ .sidebar-dim {
+  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
+  background-position: center;
+  background-size: 130% auto;
 }
 
 .hover\:bg-sky-700:hover {

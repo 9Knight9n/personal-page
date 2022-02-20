@@ -44,6 +44,46 @@
 
         splide.mount();
     </script>
+
+    <script>
+        var i = 0;
+        var index = 0;
+        var increasing = true;
+        var txt = ["وب سایت" , "وب اپلیکشن" , "اپلیکشن موبایل" , "رابط کاربری" ]; /* The text */
+        var speed = 150; /* The speed/duration of the effect in milliseconds */
+
+        function typeWriter() {
+            if (index === txt.length)
+                index=0;
+            if (increasing)
+            {
+                if (i < txt[index].length) {
+                    document.getElementById("typing-text").innerHTML += txt[index].charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+                else {
+                    increasing = false;
+                    setTimeout(typeWriter, 10*speed);
+                }
+            }
+            else
+            {
+                if (i >-1) {
+                    document.getElementById("typing-text").innerHTML = txt[index].substring(0,i);
+                    i--;
+                    setTimeout(typeWriter, speed/3);
+                }
+                else {
+                    increasing = true;
+                    index++;
+                    setTimeout(typeWriter, 10*speed);
+                }
+            }
+
+        }
+        typeWriter();
+    </script>
     <!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.min.js' id='smooth-scrollbar-js'></script>-->
 <!--<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/plugins/overscroll.min.js' id='overscroll-js'></script>-->
 </body>

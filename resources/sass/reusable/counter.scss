@@ -1,0 +1,42 @@
+.counter{
+    >div:after{
+        --maxValue: var(--value);
+        content: counter(count);
+        animation: counter 3s 1 forwards;
+    }
+    @keyframes counter {
+        0% {
+            counter-increment: count 0;
+        }
+        10% {
+            counter-increment: count calc(var(--maxValue)*0.4);
+        }
+        20% {
+            counter-increment: count calc(var(--maxValue)*0.6);
+        }
+        30% {
+            counter-increment: count calc(var(--maxValue)*0.7);
+        }
+        40% {
+            counter-increment: count calc(var(--maxValue)*0.78);
+        }
+        50% {
+            counter-increment: count calc(var(--maxValue)*0.84);
+        }
+        60% {
+            counter-increment: count calc(var(--maxValue)*0.9);
+        }
+        70% {
+            counter-increment: count calc(var(--maxValue)*0.93);
+        }
+        80% {
+            counter-increment: count calc(var(--maxValue)*0.96);
+        }
+        90% {
+            counter-increment: count calc(var(--maxValue)*0.99);
+        }
+        100% {
+            counter-increment: count var(--maxValue);
+        }
+    }
+}

@@ -3,7 +3,7 @@
         require "sidebar.php";
     ?>
     <div class="sidebar-dim">
-        <div class="px-10 w-full h-full" style="background-color: #191923F2">
+        <div class="px-10 w-full h-full" style="background-color: #191923F2;overflow-y: auto;">
             <?php
             require "home.php";
             ?>
