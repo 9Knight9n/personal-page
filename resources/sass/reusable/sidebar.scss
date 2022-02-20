@@ -5,7 +5,7 @@
 
 .slider-container .sidebar-mobile{
     @extend .bg-secondary;
-    @apply lg:hidden w-full shadow-xl h-20 justify-between;
+    @apply lg:hidden w-full shadow-xl h-20 justify-between flex ;
     label{
         @apply  flex ;
     }

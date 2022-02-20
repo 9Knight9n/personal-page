@@ -629,6 +629,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .slider-container .sidebar-mobile {
+  display: flex;
   height: 5rem;
   width: 100%;
   justify-content: space-between;
@@ -941,6 +942,9 @@ h6 {
 }
 .right-0 {
   right: 0px;
+}
+.m-4 {
+  margin: 1rem;
 }
 .mx-auto {
   margin-left: auto;
