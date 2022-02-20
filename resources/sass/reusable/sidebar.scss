@@ -102,19 +102,19 @@
 
     .open-bar{
         right:0;
-        transition:right 1s;
+        transition:right 0.5s;
         transition-delay: var(--n);
         @apply py-2;
     }
 
 }
 .slider-container .sidebar~.sidebar-dim{
-    @apply w-full;
+    @apply w-full w-full;
     overflow-y: hidden;
-    width: calc(100% - 5rem);
+    //width: calc(100% - 5rem);
 
 }
 .slider-container .drawer-toggle:checked~.sidebar~.sidebar-dim{
     opacity:0.5;
-
+    //transform: translateX(10%);
 }

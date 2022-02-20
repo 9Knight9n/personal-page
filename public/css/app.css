@@ -757,7 +757,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .slider-container .drawer-toggle:checked ~ .sidebar .open-bar {
   right: 0;
-  transition: right 1s;
+  transition: right 0.5s;
   transition-delay: var(--n);
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
@@ -766,7 +766,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .slider-container .sidebar ~ .sidebar-dim {
   width: 100%;
   overflow-y: hidden;
-  width: calc(100% - 5rem);
 }
 
 .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {

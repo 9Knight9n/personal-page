@@ -21,6 +21,14 @@
     <script>
         const Scrollbar = window.Scrollbar;
 
+        Scrollbar.init(document.querySelector('#my-scrollbar-2'), {
+            // speed:1.2,
+            damping:0.08,
+            // alwaysShowTracks:true,
+            // continuousScrolling:true
+            overscrollEffect:"bounce"
+        });
+
         Scrollbar.initAll({
             // speed:1.2,
             damping:0.08,
