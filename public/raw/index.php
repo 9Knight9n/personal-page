@@ -49,8 +49,8 @@
         var i = 0;
         var index = 0;
         var increasing = true;
-        var txt = ["وب سایت" , "وب اپلیکشن" , "اپلیکشن موبایل" , "رابط کاربری" ]; /* The text */
-        var speed = 150; /* The speed/duration of the effect in milliseconds */
+        var txt = ["وب سایت" , "وب اپلیکشن" , "اپلیکشن موبایل" , "رابط کاربری" ];
+        var speed = 150;
 
         function typeWriter() {
             if (index === txt.length)
