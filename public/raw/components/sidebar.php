@@ -1,4 +1,10 @@
 <input id="my-drawer-1" type="checkbox" class="drawer-toggle">
+<div class="sidebar-mobile">
+    <label for="my-drawer-1" class="changing-icon">
+        <i class="fas fa-bars" ></i>
+        <i class="fas fa-times" ></i>
+    </label>
+</div>
 <div class="sidebar">
 
     <label for="my-drawer-1" class="changing-icon">

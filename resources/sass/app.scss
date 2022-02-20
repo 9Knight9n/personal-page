@@ -17,8 +17,7 @@
 .single-page{
     @media (min-width:1024px){
         @apply p-4 m-auto;
-        max-width: 1440px;
-        box-sizing: border-box;
+        max-width: 1470px;
     }
     @extend .bg-tertiary;
 }

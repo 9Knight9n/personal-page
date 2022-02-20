@@ -15,7 +15,7 @@
                         <span>
                             کد
                         </span>
-                        >
+                        >  &nbsp;
                         مهارت در ساخت
                         <span id="typing-text"></span>
                         < /

@@ -1,7 +1,26 @@
-.sidebar{
+.slider-container{
+    @apply flex flex-col lg:flex-row relative;
+
+}
+
+.slider-container .sidebar-mobile{
     @extend .bg-secondary;
-    @apply w-20 flex flex-col items-center;
-    transition: width 0.75s;
+    @apply lg:hidden w-full shadow-xl h-20 justify-between;
+    label{
+        @apply  flex ;
+    }
+    label i,>i{
+        @extend .text-secondary ;
+        @apply py-7 w-20 text-center;
+        position: relative;
+    }
+}
+
+.slider-container .sidebar{
+    @extend .bg-secondary;
+    @apply -left-20 absolute lg:relative w-20 flex h-full flex-col items-center lg:left-0;
+    z-index: 1000;
+    transition: width 0.75s,left 0.75s;
     label{
         @apply w-full flex justify-end;
         @extend .bg-primary
@@ -64,7 +83,7 @@
     }
 
 }
-.drawer-toggle {
+.slider-container .drawer-toggle {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -74,7 +93,8 @@
     width: 0;
 }
 
-.drawer-toggle:checked~.sidebar{
+.slider-container .drawer-toggle:checked~.sidebar{
+    left: 0;
     @apply w-60;
     .close-bar {
         display: none;
@@ -88,12 +108,12 @@
     }
 
 }
-.sidebar~.sidebar-dim{
+.slider-container .sidebar~.sidebar-dim{
     @apply w-full h-full;
     overflow-y: hidden;
 
 }
-.drawer-toggle:checked~.sidebar~.sidebar-dim{
+.slider-container .drawer-toggle:checked~.sidebar~.sidebar-dim{
     opacity:0.6;
 
 }

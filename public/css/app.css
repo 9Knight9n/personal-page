@@ -617,52 +617,104 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-translate-x: 0px;
   }
 }
-.sidebar {
+.slider-container {
+  position: relative;
   display: flex;
-  width: 5rem;
   flex-direction: column;
-  align-items: center;
-  transition: width 0.75s;
 }
-.sidebar label {
-  display: flex;
+@media (min-width: 1024px) {
+  .slider-container {
+    flex-direction: row;
+  }
+}
+
+.slider-container .sidebar-mobile {
+  height: 5rem;
   width: 100%;
-  justify-content: flex-end;
+  justify-content: space-between;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
-.sidebar label i, .sidebar > i {
+
+@media (min-width: 1024px) {
+  .slider-container .sidebar-mobile {
+    display: none;
+  }
+}
+.slider-container .sidebar-mobile label {
+  display: flex;
+}
+.slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i {
   width: 5rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
   text-align: center;
   position: relative;
 }
-.sidebar i > span {
+
+.slider-container .sidebar {
+  position: absolute;
+  left: -5rem;
+  display: flex;
+  height: 100%;
+  width: 5rem;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .slider-container .sidebar {
+    position: relative;
+  }
+  .slider-container .sidebar {
+    left: 0px;
+  }
+}
+
+.slider-container .sidebar {
+  z-index: 1000;
+  transition: width 0.75s, left 0.75s;
+}
+.slider-container .sidebar label {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+}
+.slider-container .sidebar label i, .slider-container .sidebar > i {
+  width: 5rem;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+  text-align: center;
+  position: relative;
+}
+.slider-container .sidebar i > span {
   position: absolute;
   top: 1rem;
 }
-.sidebar i span button {
+.slider-container .sidebar i span button {
   background-color: #FFC107;
 }
-.sidebar i span button span {
+.slider-container .sidebar i span button span {
   --tw-text-opacity: 1;
   color: rgb(0 0 0 / var(--tw-text-opacity));
 }
-.sidebar div {
+.slider-container .sidebar div {
   margin-bottom: 6rem;
   display: flex;
   height: 24rem;
   align-items: flex-end;
 }
-.sidebar div span {
+.slider-container .sidebar div span {
   transform: rotate(90deg);
 }
-.sidebar .open-bar {
+.slider-container .sidebar .open-bar {
   position: relative;
   width: 100%;
   right: 300px;
   transition-delay: 0s;
 }
-.sidebar ul {
+.slider-container .sidebar ul {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -672,20 +724,20 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-right: 1.5rem;
   justify-content: center;
 }
-.sidebar li {
+.slider-container .sidebar li {
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-align: right;
 }
-.sidebar li i {
+.slider-container .sidebar li i {
   transition: transform 0.3s;
 }
-.sidebar li:hover > i {
+.slider-container .sidebar li:hover > i {
   --tw-rotate: -90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 
-.drawer-toggle {
+.slider-container .drawer-toggle {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
@@ -695,13 +747,14 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 0;
 }
 
-.drawer-toggle:checked ~ .sidebar {
+.slider-container .drawer-toggle:checked ~ .sidebar {
+  left: 0;
   width: 15rem;
 }
-.drawer-toggle:checked ~ .sidebar .close-bar {
+.slider-container .drawer-toggle:checked ~ .sidebar .close-bar {
   display: none;
 }
-.drawer-toggle:checked ~ .sidebar .open-bar {
+.slider-container .drawer-toggle:checked ~ .sidebar .open-bar {
   right: 0;
   transition: right 1s;
   transition-delay: var(--n);
@@ -709,13 +762,13 @@ Ensure the default browser behavior of the `hidden` attribute.
   padding-bottom: 0.5rem;
 }
 
-.sidebar ~ .sidebar-dim {
+.slider-container .sidebar ~ .sidebar-dim {
   height: 100%;
   width: 100%;
   overflow-y: hidden;
 }
 
-.drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
+.slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
   opacity: 0.6;
 }
 
@@ -726,7 +779,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition: opacity 0.5s, transform 0.5s;
 }
 .changing-icon i:first-child {
-  position: absolute;
+  position: absolute !important;
 }
 .changing-icon i:last-child {
   transform: rotate(-180deg) scale(0.5);
@@ -783,11 +836,11 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(-50%, -50%);
 }
 
-.bg-primary, .home .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .sidebar label {
+.bg-primary, .home .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar label {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
 }
 
-.bg-secondary, .sidebar {
+.bg-secondary, .slider-container .sidebar-mobile, .slider-container .sidebar {
   background: #20202A;
 }
 
@@ -810,7 +863,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .sidebar label i, .sidebar > i, .sidebar div span, .sidebar li {
+.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar label i, .slider-container .sidebar > i, .slider-container .sidebar div span, .slider-container .sidebar li {
   color: #8C8C8E;
 }
 
@@ -1028,9 +1081,9 @@ h6 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
 }
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+.px-7 {
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -1047,14 +1100,6 @@ h6 {
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-}
-.px-8 {
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
 }
 .pt-8 {
   padding-top: 2rem;
@@ -1671,8 +1716,7 @@ h6 {
     padding: 1rem;
   }
   .single-page {
-    max-width: 1440px;
-    box-sizing: border-box;
+    max-width: 1470px;
   }
 }
 

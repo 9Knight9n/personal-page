@@ -1,4 +1,4 @@
-<div class="h-full w-full" style="display: flex; overflow-y: hidden">
+<div class="h-full w-full slider-container" style="display: flex; overflow-y: hidden">
     <?php
         require "sidebar.php";
     ?>
