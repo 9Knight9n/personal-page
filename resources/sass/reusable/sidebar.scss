@@ -109,11 +109,12 @@
 
 }
 .slider-container .sidebar~.sidebar-dim{
-    @apply w-full h-full;
+    @apply w-full;
     overflow-y: hidden;
+    width: calc(100% - 5rem);
 
 }
 .slider-container .drawer-toggle:checked~.sidebar~.sidebar-dim{
-    opacity:0.6;
+    opacity:0.5;
 
 }

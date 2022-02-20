@@ -8,9 +8,5 @@
             require "home.php";
             ?>
         </div>
-
-<!--        <article>-->
-<!--            <img src="../../static/bg-1.jpg">-->
-<!--        </article>-->
     </div>
 </div>

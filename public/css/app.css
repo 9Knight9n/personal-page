@@ -764,13 +764,13 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .slider-container .sidebar ~ .sidebar-dim {
-  height: 100%;
   width: 100%;
   overflow-y: hidden;
+  width: calc(100% - 5rem);
 }
 
 .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .changing-icon {
