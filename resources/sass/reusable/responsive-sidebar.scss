@@ -20,6 +20,15 @@
     --tw-translate-x: 0px;
 }
 
+.responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button{
+    @apply lg:hidden absolute w-20 h-20 -left-20 flex;
+    @extend .text-secondary;
+    cursor: pointer;
+    i{
+        @apply m-auto pb-2;
+    }
+}
+
 .responsive-sidebar{
     .drawer-toggle {
         -webkit-appearance: none;

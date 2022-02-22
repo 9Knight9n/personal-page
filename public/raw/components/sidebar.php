@@ -4,9 +4,6 @@
         <i class="fas fa-bars" ></i>
         <i class="fas fa-times" ></i>
     </label>
-    <label for="my-drawer-2" style="cursor: pointer" class="mb-4 btn btn-primary drawer-button lg:hidden text-primary">
-        <i class="fas fa-ellipsis-v"></i>
-    </label>
 </div>
 <div class="sidebar">
 

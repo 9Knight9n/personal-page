@@ -7,9 +7,15 @@
     </div>
     <div class="drawer-side">
         <label for="my-drawer-2" class="drawer-overlay"></label>
-        <?php
+        <div>
+            <label for="my-drawer-2" class="drawer-button">
+                <i class="fas fa-ellipsis-v"></i>
+            </label>
+            <?php
             require "about-me.php"
-        ?>
+            ?>
+        </div>
+
     </div>
 </div>
 

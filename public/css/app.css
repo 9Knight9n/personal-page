@@ -483,6 +483,28 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-translate-x: 0px;
 }
 
+.responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button {
+  position: absolute;
+  left: -5rem;
+  display: flex;
+  height: 5rem;
+  width: 5rem;
+}
+
+@media (min-width: 1024px) {
+  .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button {
+    display: none;
+  }
+}
+
+.responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button {
+  cursor: pointer;
+}
+.responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button i {
+  margin: auto;
+  padding-bottom: 0.5rem;
+}
+
 .responsive-sidebar .drawer-toggle {
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -874,7 +896,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div span, .slider-container .sidebar li {
+.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div span, .slider-container .sidebar li {
   color: #8C8C8E;
 }
 
