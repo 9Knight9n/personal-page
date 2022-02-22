@@ -627,6 +627,9 @@ Ensure the default browser behavior of the `hidden` attribute.
     flex-direction: row;
   }
 }
+.slider-container {
+  overflow-x: hidden;
+}
 
 .slider-container .sidebar-mobile {
   display: flex;
@@ -656,33 +659,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .slider-container .sidebar {
   position: absolute;
-  left: -5rem;
+  left: -10rem;
   display: flex;
   height: 100%;
-  width: 5rem;
+  width: 15rem;
   flex-direction: column;
-  align-items: center;
-}
-
-@media (min-width: 1024px) {
-  .slider-container .sidebar {
-    position: relative;
-  }
-  .slider-container .sidebar {
-    left: 0px;
-  }
-}
-
-.slider-container .sidebar {
+  align-items: flex-end;
   z-index: 1000;
-  transition: width 0.75s, left 0.75s;
+  transition: left 1s;
 }
-.slider-container .sidebar label {
+.slider-container .sidebar > label.changing-icon {
   display: flex;
   width: 100%;
   justify-content: flex-end;
 }
-.slider-container .sidebar label i, .slider-container .sidebar > i {
+.slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i {
   width: 5rem;
   padding-top: 1.75rem;
   padding-bottom: 1.75rem;
@@ -709,11 +700,27 @@ Ensure the default browser behavior of the `hidden` attribute.
 .slider-container .sidebar div span {
   transform: rotate(90deg);
 }
+.slider-container .sidebar .close-bar {
+  position: absolute;
+  margin-top: 5rem;
+  display: flex;
+  width: 5rem;
+  flex-direction: column;
+  transition: opacity 0.5s;
+  opacity: 1;
+  height: calc(100% - 10rem);
+}
+.slider-container .sidebar .close-bar > span {
+  margin: auto;
+}
 .slider-container .sidebar .open-bar {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   position: relative;
   width: 100%;
   right: 300px;
-  transition-delay: 0s;
+  transition: right 0.4s var(--n), opacity 0.8s;
+  opacity: 0;
 }
 .slider-container .sidebar ul {
   position: relative;
@@ -753,23 +760,27 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 15rem;
 }
 .slider-container .drawer-toggle:checked ~ .sidebar .close-bar {
-  display: none;
+  opacity: 0;
 }
 .slider-container .drawer-toggle:checked ~ .sidebar .open-bar {
+  opacity: 1;
   right: 0;
-  transition: right 0.5s;
-  transition-delay: var(--n);
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
 }
 
 .slider-container .sidebar ~ .sidebar-dim {
-  width: 100%;
+  transform: translateX(5rem);
   overflow-y: hidden;
+  width: calc(100% - 5rem);
+  transition: transform 1s;
 }
 
 .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
   opacity: 0.5;
+}
+@media (min-width: 1024px) {
+  .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
+    transform: translateX(15rem);
+  }
 }
 
 .changing-icon {
@@ -836,7 +847,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(-50%, -50%);
 }
 
-.bg-primary, .home .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar label {
+.bg-primary, .home .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
 }
 
@@ -863,7 +874,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar label i, .slider-container .sidebar > i, .slider-container .sidebar div span, .slider-container .sidebar li {
+.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div span, .slider-container .sidebar li {
   color: #8C8C8E;
 }
 
@@ -941,9 +952,6 @@ h6 {
 }
 .right-0 {
   right: 0px;
-}
-.m-4 {
-  margin: 1rem;
 }
 .mx-auto {
   margin-left: auto;

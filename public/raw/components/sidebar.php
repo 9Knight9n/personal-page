@@ -15,16 +15,17 @@
         <i class="fas fa-times" ></i>
     </label>
 
-    <i class="fas fa-shopping-cart close-bar">
-        <span class="flex-grow text-right">
-            <button type="button" class="w-4 h-4 text-xs  rounded-full text-white">
-                <span class="p-1">
-                    7
-                </span>
-            </button>
-        </span>
-    </i>
+
     <div class="close-bar">
+        <i class="fas fa-shopping-cart">
+            <span class="flex-grow text-right">
+                <button type="button" class="w-4 h-4 text-xs  rounded-full text-white">
+                    <span class="p-1">
+                        7
+                    </span>
+                </button>
+            </span>
+        </i>
         <span>
             خانه
         </span>

@@ -1,5 +1,6 @@
 .slider-container{
     @apply flex flex-col lg:flex-row relative;
+    overflow-x: hidden;
 
 }
 
@@ -18,14 +19,14 @@
 
 .slider-container .sidebar{
     @extend .bg-secondary;
-    @apply -left-20 absolute lg:relative w-20 flex h-full flex-col items-center lg:left-0;
+    @apply absolute w-60 flex h-full flex-col items-end -left-40;
     z-index: 1000;
-    transition: width 0.75s,left 0.75s;
-    label{
+    transition: left 1s;
+    >label.changing-icon{
         @apply w-full flex justify-end;
         @extend .bg-primary
     }
-    label i,>i{
+    .close-bar i,label.changing-icon i{
         @extend .text-secondary ;
         @apply py-7 w-20 text-center;
         position: relative;
@@ -53,12 +54,24 @@
         transform: rotate(90deg);
     }
 
+    .close-bar{
+        @apply w-20 flex flex-col absolute mt-20;
+        transition: opacity 0.5s;
+        opacity: 1;
+        height: calc(100% - 10rem);
+        >span{
+            @apply m-auto;
+        }
+    }
+
 
     .open-bar{
+        @apply py-2;
         position:relative;
         width:100%;
         right:300px;
-        transition-delay: 0s;
+        transition:right 0.4s var(--n),opacity 0.8s;
+        opacity: 0;
     }
 
     ul{
@@ -97,24 +110,25 @@
     left: 0;
     @apply w-60;
     .close-bar {
-        display: none;
+        opacity: 0;
     }
 
     .open-bar{
+        opacity: 1;
         right:0;
-        transition:right 0.5s;
-        transition-delay: var(--n);
-        @apply py-2;
     }
 
 }
 .slider-container .sidebar~.sidebar-dim{
-    @apply w-full w-full;
+    transform: translateX(5rem);
     overflow-y: hidden;
-    //width: calc(100% - 5rem);
-
+    width: calc(100% - 5rem);
+    transition: transform 1s;
 }
 .slider-container .drawer-toggle:checked~.sidebar~.sidebar-dim{
     opacity:0.5;
-    //transform: translateX(10%);
+    @media (min-width: 1024px){
+        transform: translateX(15rem);
+    }
+
 }
