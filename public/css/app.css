@@ -1185,6 +1185,9 @@ h6 {
 .flex-grow {
   flex-grow: 1;
 }
+.transform {
+  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
 .resize {
   resize: both;
 }
@@ -1894,9 +1897,6 @@ h6 {
   .demo .demo-content {
     flex-direction: row-reverse;
   }
-}
-.demo .demo-content {
-  transition: 0.55s ease-in-out;
 }
 .demo .demo-col {
   display: flex;
