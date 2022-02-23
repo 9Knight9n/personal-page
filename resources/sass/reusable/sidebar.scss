@@ -49,7 +49,7 @@
         @apply h-96 flex items-end mb-24;
 
     }
-    div span{
+    div >span{
         @extend .text-secondary ;
         transform: rotate(90deg);
     }

@@ -728,7 +728,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 24rem;
   align-items: flex-end;
 }
-.slider-container .sidebar div span {
+.slider-container .sidebar div > span {
   transform: rotate(90deg);
 }
 .slider-container .sidebar .close-bar {
@@ -990,7 +990,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .footer h5, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div span, .slider-container .sidebar li {
+.text-secondary, .footer h5, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li {
   color: #8C8C8E;
 }
 
