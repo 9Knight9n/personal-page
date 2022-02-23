@@ -122,5 +122,6 @@
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" name="@splidejs/splide" level="application" />
+    <orderEntry type="library" name="minigrid" level="application" />
   </component>
 </module>

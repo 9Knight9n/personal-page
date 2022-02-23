@@ -1,0 +1,30 @@
+@import "./variables.scss";
+.card-1{
+    @apply w-full overflow-hidden relative h-auto;
+    img{
+        @apply w-full shadow-xl transition-all duration-500 ease-in-out;
+        opacity: 0.75;
+        cursor: pointer;
+    }
+    div{
+        direction: rtl;
+        @apply absolute -bottom-32 z-50 w-full p-7 h-32;
+        @extend .bg-primary;
+        transition: bottom 0.5s;
+        h5{
+            @apply mb-4 text-base;
+        }
+        a{
+            @apply text-xs font-bold;
+        }
+    }
+}
+.card-1:hover {
+    div{
+        @apply bottom-0;
+    }
+    img{
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}

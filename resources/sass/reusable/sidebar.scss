@@ -19,7 +19,7 @@
 
 .slider-container .sidebar{
     @extend .bg-secondary;
-    @apply absolute w-60 flex h-full flex-col items-end -left-40;
+    @apply absolute w-60 flex h-full flex-col items-end -left-60 lg:-left-40 ;
     z-index: 1000;
     transition: left 1s;
     >label.changing-icon{
@@ -120,9 +120,13 @@
 
 }
 .slider-container .sidebar~.sidebar-dim{
-    transform: translateX(5rem);
+    @media (min-width: 1024px){
+        transform: translateX(5rem);
+        width: calc(100% - 5rem);
+    }
+    transform: translateX(0);
     overflow-y: hidden;
-    width: calc(100% - 5rem);
+    height: 100%;
     transition: transform 1s;
 }
 .slider-container .drawer-toggle:checked~.sidebar~.sidebar-dim{
@@ -130,4 +134,10 @@
     @media (min-width: 1024px){
         transform: translateX(15rem);
     }
+}
+#my-scrollbar-2{
+    @apply px-2 lg:px-7 w-full h-full;
+    background-color: #191923F2;
+    overflow-y: auto;
+    min-height: 100%
 }

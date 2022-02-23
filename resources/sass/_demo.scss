@@ -1,0 +1,53 @@
+.demo{
+    @apply mt-8 flex flex-col items-center lg:items-end;
+
+    .card-1{
+        @apply mb-4;
+    }
+
+    div.options{
+        @apply flex flex-row-reverse mt-8;
+    }
+
+    h6.option{
+        @apply text-xs ml-6 font-bold;
+        @extend .text-secondary;
+    }
+
+    h6.option.active{
+        @extend .text-primary;
+    }
+
+    h6.option:hover{
+        @extend .text-primary;
+        cursor: pointer;
+    }
+
+    .demo-content{
+        @apply flex flex-col md:flex-row-reverse mt-6 w-full;
+        //@apply mt-6 w-full;
+        transition: 0.55s ease-in-out;
+    }
+
+    .demo-col{
+        @apply flex flex-col w-full;
+        @media (min-width: 768px){
+            width: 48.5%;
+        }
+        height: fit-content;
+    }
+    #demo-col-1{
+        //height: fit-content;
+        //@apply h-auto;
+        margin-left: 1.5%;
+        @media (min-width: 768px){
+            margin-left: 0;
+        }
+    }
+    #demo-col-2{
+        //height: fit-content;
+        //@apply h-auto;
+        //@apply hidden md:block;
+        margin-right: 1.5%;
+    }
+}

@@ -4,7 +4,7 @@
             <section>
             </section>
             <div>
-                <img src="../../static/face-2 (1).png">
+                <img src="../../../static/face-2%20(1).png">
                 <div>
                     <h1>
                         رزومه و نمونه کارهای من را
@@ -268,7 +268,7 @@
                     <li class="splide__slide">
                         <div>
                             <a href="#">
-                                <img alt="profil" src="../../static/testimonial-1-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
+                                <img alt="profil" src="../../../static/testimonial-1-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
                             </a>
                             <h5>
                                 مینا رضایی
@@ -291,7 +291,7 @@
                     <li class="splide__slide">
                         <div>
                             <a href="#">
-                                <img alt="profil" src="../../static/testimonial-2-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
+                                <img alt="profil" src="../../../static/testimonial-2-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
                             </a>
                             <h5>
                                 مینا رضایی
@@ -314,7 +314,7 @@
                     <li class="splide__slide">
                         <div>
                             <a href="#">
-                                <img alt="profil" src="../../static/testimonial-3-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
+                                <img alt="profil" src="../../../static/testimonial-3-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
                             </a>
                             <h5>
                                 مینا رضایی
@@ -337,7 +337,7 @@
                     <li class="splide__slide">
                         <div>
                             <a href="#">
-                                <img alt="profil" src="../../static/testimonial-4-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
+                                <img alt="profil" src="../../../static/testimonial-4-1-65x65-1.jpg" class="mx-auto object-cover rounded-full h-16 w-16 "/>
                             </a>
                             <h5>
                                 مینا رضایی
@@ -363,23 +363,9 @@
     </article>
 
     <article class="cooperation">
-        <img src="../../static/brand-1-1.png">
-        <img src="../../static/brand-2-1.png">
-        <img src="../../static/brand-3-1.png">
-        <img src="../../static/brand-1-1 (1).png">
+        <img src="../../../static/brand-1-1.png">
+        <img src="../../../static/brand-2-1.png">
+        <img src="../../../static/brand-3-1.png">
+        <img src="../../../static/brand-1-1%20(1).png">
     </article>
-
-    <footer class="footer">
-        <h5>
-            <a>
-                naghizadehmdsd@gmail.com
-            </a>
-            :ایمیل
-        </h5>
-        <h5>
-            .
-            تمامی حفوق برای آرتر محفوظ است
-            ©
-        </h5>
-    </footer>
 </section>

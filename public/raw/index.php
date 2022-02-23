@@ -41,16 +41,20 @@
 
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
-        var splide = new Splide( '.splide', {
-            // type   : 'loop',
-            perPage: 2,
-            perMove: 1,
-            autoWidth: true,
-            // height   : '10rem',
-            direction: 'rtl',
-        } );
+        if (document.getElementsByClassName(".splide").length > 0)
+        {
+            var splide = new Splide( '.splide', {
+                // type   : 'loop',
+                perPage: 2,
+                perMove: 1,
+                autoWidth: true,
+                // height   : '10rem',
+                direction: 'rtl',
+            } );
 
-        splide.mount();
+            splide.mount();
+        }
+
     </script>
 
     <script>
@@ -90,8 +94,10 @@
             }
 
         }
-        typeWriter();
+        if (document.getElementById("typing-text") !== null)
+            typeWriter();
     </script>
+
     <!--    <script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/smooth-scrollbar.min.js' id='smooth-scrollbar-js'></script>-->
 <!--<script type='text/javascript' src='https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/8.7.4/plugins/overscroll.min.js' id='overscroll-js'></script>-->
 </body>

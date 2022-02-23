@@ -681,12 +681,21 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .slider-container .sidebar {
   position: absolute;
-  left: -10rem;
+  left: -15rem;
   display: flex;
   height: 100%;
   width: 15rem;
   flex-direction: column;
   align-items: flex-end;
+}
+
+@media (min-width: 1024px) {
+  .slider-container .sidebar {
+    left: -10rem;
+  }
+}
+
+.slider-container .sidebar {
   z-index: 1000;
   transition: left 1s;
 }
@@ -790,10 +799,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .slider-container .sidebar ~ .sidebar-dim {
-  transform: translateX(5rem);
+  transform: translateX(0);
   overflow-y: hidden;
-  width: calc(100% - 5rem);
+  height: 100%;
   transition: transform 1s;
+}
+@media (min-width: 1024px) {
+  .slider-container .sidebar ~ .sidebar-dim {
+    transform: translateX(5rem);
+    width: calc(100% - 5rem);
+  }
 }
 
 .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
@@ -803,6 +818,26 @@ Ensure the default browser behavior of the `hidden` attribute.
   .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
     transform: translateX(15rem);
   }
+}
+
+#my-scrollbar-2 {
+  height: 100%;
+  width: 100%;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
+@media (min-width: 1024px) {
+  #my-scrollbar-2 {
+    padding-left: 1.75rem;
+    padding-right: 1.75rem;
+  }
+}
+
+#my-scrollbar-2 {
+  background-color: #191923F2;
+  overflow-y: auto;
+  min-height: 100%;
 }
 
 .changing-icon {
@@ -869,7 +904,66 @@ Ensure the default browser behavior of the `hidden` attribute.
   transform: translate(-50%, -50%);
 }
 
-.bg-primary, .home .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon {
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.card-1 {
+  position: relative;
+  height: auto;
+  width: 100%;
+  overflow: hidden;
+}
+.card-1 img {
+  width: 100%;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 0.75;
+  cursor: pointer;
+}
+.card-1 div {
+  direction: rtl;
+  position: absolute;
+  bottom: -8rem;
+  z-index: 50;
+  height: 8rem;
+  width: 100%;
+  padding: 1.75rem;
+  transition: bottom 0.5s;
+}
+.card-1 div h5 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.card-1 div a {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.card-1:hover div {
+  bottom: 0px;
+}
+.card-1:hover img {
+  transform: scale(1.2);
+  opacity: 1;
+}
+
+.bg-primary, .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-1 div {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
 }
 
@@ -881,7 +975,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #191923;
 }
 
-.text-primary, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
+.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -896,7 +990,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .home .footer h5, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div span, .slider-container .sidebar li {
+.text-secondary, .footer h5, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div span, .slider-container .sidebar li {
   color: #8C8C8E;
 }
 
@@ -963,6 +1057,40 @@ h6 {
 .show-more:hover > i, .home .pricing > div > article a:hover > i, .home .services > div > article a:hover > i {
   left: -10px;
 }
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
+}
 .fixed {
   position: fixed;
 }
@@ -978,9 +1106,6 @@ h6 {
 .mx-auto {
   margin-left: auto;
   margin-right: auto;
-}
-.mb-4 {
-  margin-bottom: 1rem;
 }
 .ml-1 {
   margin-left: 0.25rem;
@@ -1021,11 +1146,11 @@ h6 {
 .h-full {
   height: 100%;
 }
-.h-16 {
-  height: 4rem;
-}
 .h-4 {
   height: 1rem;
+}
+.h-16 {
+  height: 4rem;
 }
 .h-5 {
   height: 1.25rem;
@@ -1039,11 +1164,11 @@ h6 {
 .w-full {
   width: 100%;
 }
-.w-16 {
-  width: 4rem;
-}
 .w-4 {
   width: 1rem;
+}
+.w-16 {
+  width: 4rem;
 }
 .w-5 {
   width: 1.25rem;
@@ -1059,6 +1184,9 @@ h6 {
 }
 .flex-grow {
   flex-grow: 1;
+}
+.resize {
+  resize: both;
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
@@ -1113,10 +1241,6 @@ h6 {
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
-}
-.px-7 {
-  padding-left: 1.75rem;
-  padding-right: 1.75rem;
 }
 .py-4 {
   padding-top: 1rem;
@@ -1724,21 +1848,79 @@ h6 {
   display: flex;
   justify-content: space-between;
 }
-.home .footer {
+
+.sidebar ~ .sidebar-dim {
+  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
+  background-position: center;
+  background-size: 130% auto;
+}
+
+.demo {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .demo {
+    align-items: flex-end;
+  }
+}
+.demo .card-1 {
+  margin-bottom: 1rem;
+}
+.demo div.options {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+.demo h6.option {
+  margin-left: 1.5rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+.demo h6.option:hover {
+  cursor: pointer;
+}
+.demo .demo-content {
+  margin-top: 1.5rem;
   display: flex;
   width: 100%;
-  justify-content: space-between;
-  position: relative;
-  bottom: 0;
+  flex-direction: column;
 }
-.home .footer h5 {
-  margin-left: 1.25rem;
-  margin-right: 1.25rem;
-  margin-top: 1.25rem;
-  margin-bottom: 1.25rem;
-  text-align: right;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
+@media (min-width: 768px) {
+  .demo .demo-content {
+    flex-direction: row-reverse;
+  }
+}
+.demo .demo-content {
+  transition: 0.55s ease-in-out;
+}
+.demo .demo-col {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+}
+@media (min-width: 768px) {
+  .demo .demo-col {
+    width: 48.5%;
+  }
+}
+.demo #demo-col-1 {
+  margin-left: 1.5%;
+}
+@media (min-width: 768px) {
+  .demo #demo-col-1 {
+    margin-left: 0;
+  }
+}
+.demo #demo-col-2 {
+  margin-right: 1.5%;
 }
 
 @media (min-width: 1024px) {
@@ -1753,17 +1935,26 @@ h6 {
   }
 }
 
-.sidebar ~ .sidebar-dim {
-  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
-  background-position: center;
-  background-size: 130% auto;
+.footer {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  position: relative;
+  bottom: 0;
 }
-
+.footer h5 {
+  margin-left: 1.25rem;
+  margin-right: 1.25rem;
+  margin-top: 1.25rem;
+  margin-bottom: 1.25rem;
+  text-align: right;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
 .hover\:bg-sky-700:hover {
   --tw-bg-opacity: 1;
   background-color: rgb(3 105 161 / var(--tw-bg-opacity));
 }
-
 @media (prefers-color-scheme: dark) {
   .dark\:border-gray-700 {
     --tw-border-opacity: 1;
@@ -1790,7 +1981,6 @@ h6 {
     color: rgb(156 163 175 / var(--tw-text-opacity));
   }
 }
-
 @media (min-width: 640px) {
   .sm\:ml-0 {
     margin-left: 0px;
@@ -1827,7 +2017,6 @@ h6 {
     text-align: right;
   }
 }
-
 @media (min-width: 768px) {
   .md\:grid-cols-2 {
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -1839,11 +2028,7 @@ h6 {
     border-left-width: 1px;
   }
 }
-
 @media (min-width: 1024px) {
-  .lg\:hidden {
-    display: none;
-  }
   .lg\:px-8 {
     padding-left: 2rem;
     padding-right: 2rem;

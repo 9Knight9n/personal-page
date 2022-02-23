@@ -11,6 +11,7 @@
 
 @import "rightPanel";
 @import "home";
+@import "demo";
 
 
 
@@ -22,10 +23,16 @@
     @extend .bg-tertiary;
 }
 
-.sidebar~.sidebar-dim{
-    background-image: url(../assets/image/bg-1.jpg);
-    background-position: center;
-    background-size: 130% auto;
+.footer{
+    @extend .bg-primary;
+    @apply w-full flex justify-between;
+    position: relative;
+    bottom: 0;
+    h5{
+        @extend .text-secondary;
+        @apply text-sm text-right mx-5 my-5;
+    }
 }
+
 
 
