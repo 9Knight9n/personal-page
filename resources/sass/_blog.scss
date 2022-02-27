@@ -1,0 +1,53 @@
+@import "reusable/variables";
+.blog-1{
+    @apply mt-8 flex flex-col items-center lg:items-end;
+    >h5{
+        @extend .card-title;
+    }
+    .splide{
+        @apply mt-7 w-full mb-16;
+    }
+    .splide__list{
+        //@apply gap-8;
+    }
+    .splide__pagination{
+        @apply z-50 p-0;
+        bottom: -2rem;
+        left: auto;
+    }
+    .splide__pagination__page{
+        //@apply
+        background-color: $secondary-text-color;
+        //right: 0;
+        height: 4px;
+        width: 7px;
+        border-radius: 2px;
+        transition: width 0.5s;
+    }
+    .splide__pagination__page.is-active{
+        background-color: $hover-text-color;
+        transform: none ;
+        width: 20px;
+    }
+    .splide__arrows{
+        position: absolute;
+        bottom: -1.5rem;
+        left: 0;
+        .splide__arrow--prev{
+            left: 25px;
+            right: auto;
+        }
+        .splide__arrow--next{
+            left: 0;
+        }
+        svg{
+            @apply font-bold;
+            fill: $secondary-text-color;
+            width: 0.8rem;
+            height: 0.8rem;
+        }
+        .splide__arrow:disabled{
+            opacity: 0.2;
+        }
+    }
+}

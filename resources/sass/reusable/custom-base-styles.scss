@@ -6,9 +6,14 @@
 @import "./changing-icon.scss";
 @import "./banner.scss";
 @import "./card-1.scss";
+@import "./card-2.scss";
+
 
 .bg-primary {
     background: $primary-color;
+}
+.bg-primary-full{
+    background: $primary-color-opacity-1;
 }
 .bg-secondary {
     background: $secondary-color;

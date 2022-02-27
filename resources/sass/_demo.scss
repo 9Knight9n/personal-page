@@ -1,4 +1,8 @@
+.test{
+    height: available;
+}
 .demo{
+
     @apply mt-8 flex flex-col items-center lg:items-end;
 
     .card-1{

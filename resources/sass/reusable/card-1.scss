@@ -9,7 +9,7 @@
     div{
         direction: rtl;
         @apply absolute -bottom-32 z-50 w-full p-7 h-32;
-        @extend .bg-primary;
+        @extend .bg-primary-full;
         transition: bottom 0.5s;
         h5{
             @apply mb-4 text-base;

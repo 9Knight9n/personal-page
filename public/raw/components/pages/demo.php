@@ -177,26 +177,6 @@
         },
     ]
 
-    // // (function(){
-    // // var grid;
-    // // function init() {
-    // let grid = new Minigrid({
-    //         container: '.demo-content',
-    //         item: '.card-1',
-    //         gutter: 12
-    //     });
-    //     grid.mount();
-    // // }
-    //
-    // // mount
-    // function update() {
-    //     grid.mount();
-    // }
-    //
-    // // document.addEventListener('DOMContentLoaded', init);
-    // window.addEventListener('resize', update);
-    // })();
-
     let timer;
 
     async function displayList(list, index) {
@@ -253,7 +233,7 @@
         }else{
             for (let i = 0; i < list.length; i++) {
                 let content = "<div class='card-1 anim '>"
-                content += "<img src='" + list[i].src + "' alt='demo-pic'>";
+                content += "<img src='" + list[i].src + "' alt='demo-pic' class='test'>";
                 content += "<div>";
                 content += "<h5 class='card-title'>";
                 content += list[i].title;
@@ -290,5 +270,21 @@
     }
 
     displayList(list1, 0);
+    // let img = document.getElementById("demo-col-2");
+    let img_1 = document.getElementById("demo-col-1");
+    // for (let k = 0; k < img.length;k++)
+    // console.log((getComputedStyle(img))['blockSize'])
+    console.log((getComputedStyle(img_1)))
+
+
+
+    function getHeight(id){
+        let div = document.getElementById("demo-col-2");
+        div_css = getComputedStyle(div)
+        // let index = div_css.indexOf('gridTemplateRows: "none"')
+        console.log(div.scrollHeight)
+    }
+
+    getHeight("demo-col-2")
 
 </script>

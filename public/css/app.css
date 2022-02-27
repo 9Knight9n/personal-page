@@ -963,19 +963,119 @@ Ensure the default browser behavior of the `hidden` attribute.
   opacity: 1;
 }
 
-.bg-primary, .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-1 div {
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.card-2 {
+  height: auto;
+  width: 100%;
+}
+@media (min-width: 768px) {
+  .card-2 {
+    width: 50%;
+  }
+  .card-2 {
+    padding-left: 0.75rem;
+    padding-right: 0.75rem;
+  }
+}
+@media (min-width: 1280px) {
+  .card-2 {
+    width: 33.333333%;
+  }
+}
+.card-2 > div {
+  position: relative;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+.card-2 > div > img {
+  position: absolute;
+  z-index: -50;
+  height: 14rem;
+  width: 100%;
+  --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
+  box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
+  transition-property: all;
+  transition-duration: 500ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  -o-object-fit: cover;
+     object-fit: cover;
+  cursor: pointer;
+}
+.card-2 > div > div {
+  direction: rtl;
+  z-index: 50;
+  margin-top: 14rem;
+  height: auto;
+  width: 100%;
+  padding: 1.75rem;
+}
+.card-2 > div > div > div {
+  margin-bottom: 1rem;
+  border-radius: 0.75rem;
+  padding: 0.5rem;
+}
+.card-2 > div > div > div * {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.card-2 > div > div > div h6:first-child {
+  margin-bottom: 0.5rem;
+}
+.card-2 > div > div > div h6:nth-child(2):before {
+  content: "/";
+}
+.card-2 > div > div h5 {
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.card-2 > div > div > h6 {
+  margin-bottom: 1rem;
+}
+.card-2 > div > div a {
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+}
+
+.card-2:hover img {
+  transform: scale(1.05);
+}
+
+.bg-primary, .footer, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-2 > div > div {
   background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+}
+
+.bg-primary-full, .card-1 div {
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 
 .bg-secondary, .slider-container .sidebar-mobile, .slider-container .sidebar {
   background: #20202A;
 }
 
-.bg-tertiary, .single-page, .home .feedback .splide__slide > div > div, .home .briefing > article > section {
+.bg-tertiary, .single-page, .home .feedback .splide__slide > div > div, .home .briefing > article > section, .card-2 > div > div > div {
   background: #191923;
 }
 
-.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
+.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .blog-1 > h5, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -990,7 +1090,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .footer h5, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li {
+.text-secondary, .footer h5, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li, .card-2 > div > div > div *, .card-2 > div > div > h6 {
   color: #8C8C8E;
 }
 
@@ -1033,7 +1133,7 @@ h6 {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.card-title, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5 {
+.card-title, .blog-1 > h5, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5 {
   text-align: right;
   font-size: 1.125rem;
   line-height: 1.75rem;
@@ -1858,6 +1958,10 @@ h6 {
   background-size: 130% auto;
 }
 
+.test {
+  height: available;
+}
+
 .demo {
   margin-top: 2rem;
   display: flex;
@@ -1921,6 +2025,75 @@ h6 {
 }
 .demo #demo-col-2 {
   margin-right: 1.5%;
+}
+
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.blog-1 {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+@media (min-width: 1024px) {
+  .blog-1 {
+    align-items: flex-end;
+  }
+}
+.blog-1 .splide {
+  margin-top: 1.75rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+.blog-1 .splide__pagination {
+  z-index: 50;
+  padding: 0px;
+  bottom: -2rem;
+  left: auto;
+}
+.blog-1 .splide__pagination__page {
+  background-color: #8C8C8E;
+  height: 4px;
+  width: 7px;
+  border-radius: 2px;
+  transition: width 0.5s;
+}
+.blog-1 .splide__pagination__page.is-active {
+  background-color: #FFC107;
+  transform: none;
+  width: 20px;
+}
+.blog-1 .splide__arrows {
+  position: absolute;
+  bottom: -1.5rem;
+  left: 0;
+}
+.blog-1 .splide__arrows .splide__arrow--prev {
+  left: 25px;
+  right: auto;
+}
+.blog-1 .splide__arrows .splide__arrow--next {
+  left: 0;
+}
+.blog-1 .splide__arrows svg {
+  font-weight: 700;
+  fill: #8C8C8E;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+.blog-1 .splide__arrows .splide__arrow:disabled {
+  opacity: 0.2;
 }
 
 @media (min-width: 1024px) {

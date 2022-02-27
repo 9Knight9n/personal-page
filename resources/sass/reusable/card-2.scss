@@ -1,0 +1,46 @@
+@import "./variables.scss";
+.card-2{
+    @apply w-full md:w-1/2 xl:w-1/3 h-auto md:px-3;
+    >div{
+        @apply h-full w-full overflow-hidden flex flex-col items-center relative;
+        >img{
+            @apply w-full shadow-xl transition-all duration-500 ease-in-out absolute -z-50 h-56;
+            object-fit: cover;
+            cursor: pointer;
+        }
+        >div{
+            direction: rtl;
+            @apply w-full p-7 h-auto z-50 mt-56;
+            @extend .bg-primary;
+            >div{
+                @apply rounded-xl p-2 mb-4;
+                @extend .bg-tertiary;
+                * {
+                    @extend .text-secondary;
+                    @apply text-xs;
+                }
+                h6:first-child{
+                    @apply mb-2;
+                }
+                h6:nth-child(2):before{
+                    content: "/";
+                }
+            }
+            h5{
+                @apply mb-4 text-base;
+            }
+            >h6{
+                @extend .text-secondary;
+                @apply mb-4;
+            }
+            a{
+                @apply text-xs font-bold;
+            }
+        }
+    }
+}
+.card-2:hover {
+    img{
+        transform: scale(1.05);
+    }
+}

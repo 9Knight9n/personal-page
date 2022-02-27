@@ -69,6 +69,10 @@
                 {
                     require "pages/demo.php";
                 }
+                elseif ($_GET['page'] == "blog-1")
+                {
+                    require "pages/blog-1.php";
+                }
 
             ?>
             <footer class="footer">
