@@ -69,9 +69,9 @@
                 {
                     require "pages/demo.php";
                 }
-                elseif ($_GET['page'] == "blog-1")
+                elseif ($_GET['page'] == "blog")
                 {
-                    require "pages/blog-1.php";
+                    require "pages/blog.php";
                 }
 
             ?>

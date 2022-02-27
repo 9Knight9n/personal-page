@@ -1004,9 +1004,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   overflow: hidden;
 }
 .card-2 > div > img {
-  position: absolute;
+  position: relative;
   z-index: -50;
-  height: 14rem;
   width: 100%;
   --tw-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
   --tw-shadow-colored: 0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);
@@ -1014,6 +1013,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition-property: all;
   transition-duration: 500ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  aspect-ratio: 5/3;
   -o-object-fit: cover;
      object-fit: cover;
   cursor: pointer;
@@ -1021,7 +1021,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .card-2 > div > div {
   direction: rtl;
   z-index: 50;
-  margin-top: 14rem;
   height: auto;
   width: 100%;
   padding: 1.75rem;
