@@ -66,8 +66,6 @@
     </article>
 </section>
 
-<!--<script src="https://unpkg.com/minigrid@3.1.1/dist/minigrid.min.js"></script>-->
-
 <script>
 
     let list1 = [
@@ -177,9 +175,21 @@
         },
     ]
 
+    let sizes = {}
+
     let timer;
 
     async function displayList(list, index) {
+
+
+        sizes = {}
+        for(let j = 0;j<list.length;j++)
+        {
+            getHeight(list[j].src,j)
+        }
+        await delay(500).then(() => console.log(''))
+        let h1=0;
+        let h2=0;
 
         let options = document.getElementsByClassName("option")
         for (let i = 0; i < options.length; i++)
@@ -187,8 +197,8 @@
         options[index].classList.add("active")
 
 
-        let col1 = document.getElementById("demo-col-1")
 
+        let col1 = document.getElementById("demo-col-1")
         let col2 = document.getElementById("demo-col-2")
 
 
@@ -196,69 +206,48 @@
 
         let cards = document.getElementsByClassName('card-1');
         if (cards.length!==0){
-            timer = setInterval(function() {
+            timer = setInterval(async function () {
                 col1.innerHTML = "";
                 col2.innerHTML = "";
 
 
-                for (let i = 0; i < list.length; i++) {
-                    let content = "<div class='card-1 anim '>"
-                    content += "<img src='" + list[i].src + "' alt='demo-pic'>";
-                    content += "<div>";
-                    content += "<h5 class='card-title'>";
-                    content += list[i].title;
-                    content += "</h5>";
-                    content += "<a href='#' class='show-more'>";
-                    content += "بیشتر بخوانید";
-                    content += "<i class='fas fa-angle-left'></i>";
-                    content += "</a>";
-                    content += "</div>";
-                    content += "</div>";
-
-                    // col.innerHTML += content;
-
-                    // let cards = document.getElementsByClassName('card-1')[];
-                    // console.log("----------------------------")
-                    if (document.getElementById("demo-col-2").clientHeight >= document.getElementById("demo-col-1").clientHeight)
-                        col1.innerHTML += content;
-                    else
-                        col2.innerHTML += content;
-
-
-                }
+                createCardTag(list,i,col1,col2,h1,h2)
 
                 clearInterval(timer)
             }, 400)
 
         }else{
-            for (let i = 0; i < list.length; i++) {
-                let content = "<div class='card-1 anim '>"
-                content += "<img src='" + list[i].src + "' alt='demo-pic' class='test'>";
-                content += "<div>";
-                content += "<h5 class='card-title'>";
-                content += list[i].title;
-                content += "</h5>";
-                content += "<a href='#' class='show-more'>";
-                content += "بیشتر بخوانید";
-                content += "<i class='fas fa-angle-left'></i>";
-                content += "</a>";
-                content += "</div>";
-                content += "</div>";
-
-                // col.innerHTML += content;
-
-                // let cards = document.getElementsByClassName('card-1')[];
-                // console.log("----------------------------")
-                if (document.getElementById("demo-col-2").clientHeight >= document.getElementById("demo-col-1").clientHeight)
-                    col1.innerHTML += content;
-                else
-                    col2.innerHTML += content;
-
-
-            }
+            createCardTag(list,i,col1,col2,h1,h2)
         }
     }
 
+    function createCardTag(list,i,col1,col2,h1,h2){
+        for (let i = 0; i < list.length; i++) {
+            let content = "<div class='card-1 anim '>"
+            content += "<img src='" + list[i].src + "' alt='demo-pic' class='test' id='img-"+i+"'>";
+            content += "<div>";
+            content += "<h5 class='card-title'>";
+            content += list[i].title;
+            content += "</h5>";
+            content += "<a href='#' class='show-more'>";
+            content += "بیشتر بخوانید";
+            content += "<i class='fas fa-angle-left'></i>";
+            content += "</a>";
+            content += "</div>";
+            content += "</div>";
+
+            if (h2 >= h1)
+            {
+                col1.innerHTML += content;
+                h1 += sizes[i.toString()]
+            }
+            else
+            {
+                col2.innerHTML += content;
+                h2 += sizes[i.toString()]
+            }
+        }
+    }
 
     function clearAnim(){
         let cards = document.getElementsByClassName('card-1');
@@ -270,21 +259,20 @@
     }
 
     displayList(list1, 0);
-    // let img = document.getElementById("demo-col-2");
-    let img_1 = document.getElementById("demo-col-1");
-    // for (let k = 0; k < img.length;k++)
-    // console.log((getComputedStyle(img))['blockSize'])
-    console.log((getComputedStyle(img_1)))
 
 
-
-    function getHeight(id){
-        let div = document.getElementById("demo-col-2");
-        div_css = getComputedStyle(div)
-        // let index = div_css.indexOf('gridTemplateRows: "none"')
-        console.log(div.scrollHeight)
+    function getHeight(url,id) {
+        let img = new Image();
+        img.onload = function () {
+            let height = img.height;
+            let width = img.width;
+            sizes[id.toString()] = height / width;
+        }
+        img.src = url
     }
 
-    getHeight("demo-col-2")
+    function delay(time) {
+        return new Promise(resolve => setTimeout(resolve, time));
+    }
 
 </script>
