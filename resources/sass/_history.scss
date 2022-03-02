@@ -1,0 +1,48 @@
+@import "./reusable/variables";
+.history{
+    @apply flex-row-reverse flex flex-wrap mt-8 mb-4;
+    >article{
+        @apply flex flex-col w-full md:w-1/2;
+
+        >h5{
+            @extend .card-title;
+            @apply text-xl mb-6;
+        }
+        >div{
+            @apply w-full h-full flex flex-col relative;
+            border-right: solid 5px $tertiary-color;
+            >div{
+                .blinking-dot{
+                    @apply absolute right-0;
+                    margin-right: -0.65rem;
+                }
+                .blinking-dot~div{
+                    direction: rtl;
+                    @apply mb-6 mx-6 shadow-lg py-4 px-6 flex flex-col;
+                    width: calc(100% - 3rem);
+                    @extend .bg-primary;
+                    >div{
+                        @apply w-full flex flex-row justify-between;
+                        >h5{
+                            @extend .card-title;
+                        }
+                        >div{
+                            @apply text-sm px-4 py-2 rounded-2xl;
+                            @extend .text-secondary , .bg-tertiary;
+                        }
+
+                    }
+                    >h6:nth-child(2){
+                        @apply text-sm font-thin mb-5;
+                        @extend .text-secondary;
+                    }
+                    >h6:nth-child(3){
+                        @apply text-sm mb-5;
+                        @extend .text-secondary;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,0 +1,11 @@
+@import "variables";
+.blinking-dot{
+    @apply relative flex justify-center;
+    >i:first-child{
+        color: $hover-text-color;
+    }
+    >i:nth-child(2){
+        @apply text-xs absolute z-50 m-auto;
+        color: $tertiary-color;
+    }
+}

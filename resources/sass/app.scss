@@ -13,6 +13,7 @@
 @import "home";
 @import "demo";
 @import "blog";
+@import "history";
 
 
 
@@ -26,12 +27,13 @@
 
 .footer{
     @extend .bg-primary;
-    @apply w-full flex justify-between;
+    @apply w-full flex justify-between h-24;
+    //margin-top: -4rem;
     position: relative;
     bottom: 0;
     h5{
         @extend .text-secondary;
-        @apply text-sm text-right mx-5 my-5;
+        @apply text-sm text-right mx-5 my-6;
     }
 }
 
