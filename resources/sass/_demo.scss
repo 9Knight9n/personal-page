@@ -57,3 +57,29 @@
 .demo~footer{
     @apply h-24;
 }
+
+.anim {
+    animation: scaleUp 1s ease;
+}
+
+.anim-reverse {
+    animation: scaleDown 1s ease;
+}
+
+@keyframes scaleUp {
+    0% {
+        transform: scale(.3);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes scaleDown {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(.3);
+    }
+}

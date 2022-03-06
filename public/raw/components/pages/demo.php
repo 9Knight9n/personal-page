@@ -1,34 +1,5 @@
 <section class="demo">
 
-    <style>
-
-        .anim {
-            animation: scaleUp 1s ease;
-        }
-
-        .anim-reverse {
-            animation: scaleDown 1s ease;
-        }
-
-        @keyframes scaleUp {
-            0% {
-                transform: scale(.3);
-            }
-            100% {
-                transform: scale(1);
-            }
-        }
-
-        @keyframes scaleDown {
-            0% {
-                transform: scale(1);
-            }
-            100% {
-                transform: scale(.3);
-            }
-        }
-    </style>
-
     <h5 class="article-title">
         نمونه کارها
     </h5>
