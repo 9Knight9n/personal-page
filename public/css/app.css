@@ -1181,7 +1181,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-decoration: line-through;
 }
 
-.bg-primary, .footer, #shop > div > select, #shop, .history > article > div > div .blinking-dot ~ div, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-2 > div > div {
+.bg-primary, .footer, #contact #contact-me, #contact #contact-info > div, #shop > div > select, #shop, .history > article > div > div .blinking-dot ~ div, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-2 > div > div {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 
@@ -1189,15 +1189,15 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 
-.bg-secondary, .slider-container .sidebar-mobile, .slider-container .sidebar {
+.bg-secondary, #contact #contact-me > div > textarea, #contact #contact-me > div > input, .slider-container .sidebar-mobile, .slider-container .sidebar {
   background: #20202A;
 }
 
-.bg-tertiary, .single-page, .history > article > div > div .blinking-dot ~ div > div > div, .home .feedback .splide__slide > div > div, .home .briefing > article > section, .card-2 > div > div > div, .blinking-dot div:nth-child(2) {
+.bg-tertiary, .single-page, #contact #contact-me > div > i, .history > article > div > div .blinking-dot ~ div > div > div, .home .feedback .splide__slide > div > div, .home .briefing > article > section, .card-2 > div > div > div, .blinking-dot div:nth-child(2) {
   background: #191923;
 }
 
-.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .history > article > div > div .blinking-dot ~ div > div > h5, .history > article > h5, .blog-1 > h5, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, #shop > h5, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
+.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .duos-text h6:nth-child(odd), #contact #contact-info > div h6:nth-child(odd), .card-title, .history > article > div > div .blinking-dot ~ div > div > h5, .history > article > h5, .blog-1 > h5, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, #contact > h5, #shop > h5, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -1212,7 +1212,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .footer h5, #shop > div > select, #shop > div > h6, #shop > h6, .history > article > div > div .blinking-dot ~ div > h6:nth-child(4), .history > article > div > div .blinking-dot ~ div > h6:nth-child(3), .history > article > div > div .blinking-dot ~ div > div > div, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li, .card-2 > div > div > div *, .card-2 > div > div > h6, .shop-item.off > div > h6:first-child, #shop > article > article.off > div > h6:first-child {
+.text-secondary, .footer h5, #contact #contact-me > div > i, #shop > div > select, #shop > div > h6, #shop > h6, .history > article > div > div .blinking-dot ~ div > h6:nth-child(4), .history > article > div > div .blinking-dot ~ div > h6:nth-child(3), .history > article > div > div .blinking-dot ~ div > div > div, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .duos-text h6:nth-child(even), #contact #contact-info > div h6:nth-child(even), .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li, .card-2 > div > div > div *, .card-2 > div > div > h6, .shop-item.off > div > h6:first-child, #shop > article > article.off > div > h6:first-child {
   color: #8C8C8E;
 }
 
@@ -1241,7 +1241,7 @@ h6 {
   background: #FF0000;
 }
 
-.article-title, #shop > h5, .home .feedback > h5, .home .pricing > h5, .home .services > h5 {
+.article-title, #contact > h5, #shop > h5, .home .feedback > h5, .home .pricing > h5, .home .services > h5 {
   text-align: right;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1280,34 +1280,40 @@ h6 {
   left: -10px;
 }
 
+.duos-text, #contact #contact-info > div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.duos-text h6, #contact #contact-info > div h6 {
+  margin-bottom: 0.25rem;
+  width: 50%;
+}
+.duos-text h6:nth-child(odd), #contact #contact-info > div h6:nth-child(odd) {
+  text-align: end;
+}
 .container {
   width: 100%;
 }
-
 @media (min-width: 640px) {
   .container {
     max-width: 640px;
   }
 }
-
 @media (min-width: 768px) {
   .container {
     max-width: 768px;
   }
 }
-
 @media (min-width: 1024px) {
   .container {
     max-width: 1024px;
   }
 }
-
 @media (min-width: 1280px) {
   .container {
     max-width: 1280px;
   }
 }
-
 @media (min-width: 1536px) {
   .container {
     max-width: 1536px;
@@ -1688,13 +1694,6 @@ h6 {
   margin-right: 0.5rem;
 }
 
-.duos-text h6 {
-  margin-bottom: 0.25rem;
-  width: 50%;
-}
-.duos-text h6:nth-child(odd) {
-  text-align: end;
-}
 .counter > div:after {
   --maxValue: var(--value);
   content: counter(count);
@@ -2147,6 +2146,10 @@ h6 {
   margin-right: 1.5%;
 }
 
+.demo ~ footer {
+  height: 6rem;
+}
+
 @keyframes growProgressBar {
   0%, 33% {
     --pgPercentage: 0;
@@ -2369,6 +2372,114 @@ h6 {
   #shop > article {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+#contact {
+  direction: rtl;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1.75rem;
+  padding-bottom: 1.75rem;
+}
+#contact > h5 {
+  margin-bottom: 1.75rem;
+}
+#contact #contact-info {
+  margin-bottom: 1.75rem;
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+@media (min-width: 768px) {
+  #contact #contact-info {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (min-width: 1280px) {
+  #contact #contact-info {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+#contact #contact-info > div {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+  padding-left: 1.75rem;
+  padding-right: 1.75rem;
+}
+#contact #contact-info > div h6:nth-child(odd) {
+  text-align: start;
+}
+#contact #contact-info > div h6:nth-child(even) {
+  text-align: end;
+}
+#contact #contact-me {
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+}
+#contact #contact-me > div {
+  margin-bottom: 1.75rem;
+  display: flex;
+  flex-direction: row-reverse;
+}
+#contact #contact-me > div > i {
+  padding: 17px;
+  transition: color 0.75s, background-color 0.75s;
+}
+#contact #contact-me > div > textarea, #contact #contact-me > div > input {
+  direction: rtl;
+  flex-grow: 1;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: white;
+  outline: none;
+}
+#contact #contact-me > div > input::-moz-placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+#contact #contact-me > div > input:-ms-input-placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+#contact #contact-me > div > textarea, #contact #contact-me > div > input::placeholder {
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+#contact #contact-me > div > textarea:focus ~ i, #contact #contact-me > div > input:focus ~ i {
+  background-color: #FFC107;
+  color: black;
+}
+#contact #contact-me > div > textarea {
+  height: 10rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+#contact #contact-me > button {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  font-weight: 700;
+  background-color: #FFC107;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+@media (min-width: 1024px) {
   .single-page {
     margin: auto;
   }
@@ -2382,7 +2493,6 @@ h6 {
 
 .footer {
   display: flex;
-  height: 6rem;
   width: 100%;
   justify-content: space-between;
   position: relative;

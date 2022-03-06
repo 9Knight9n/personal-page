@@ -97,3 +97,17 @@ h6{
         left: -10px;
     }
 }
+
+.duos-text{
+    @apply flex flex-wrap;
+    h6 {
+        @apply w-2/4 mb-1;
+    }
+    h6:nth-child(odd){
+        text-align: end;
+        @extend .text-primary;
+    }
+    h6:nth-child(even){
+        @extend .text-secondary;
+    }
+}

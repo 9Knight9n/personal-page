@@ -81,6 +81,10 @@
                 {
                     require "pages/shop.php";
                 }
+                elseif ($_GET['page'] == "contact")
+                {
+                    require "pages/contact.php";
+                }
 
             ?>
             <footer class="footer">

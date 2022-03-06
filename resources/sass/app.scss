@@ -15,6 +15,8 @@
 @import "blog";
 @import "history";
 @import "shop";
+@import "contact";
+
 
 
 .single-page{
@@ -27,7 +29,7 @@
 
 .footer{
     @extend .bg-primary;
-    @apply w-full flex justify-between h-24;
+    @apply w-full flex justify-between;
     //margin-top: -4rem;
     position: relative;
     bottom: 0;
