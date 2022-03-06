@@ -1,4 +1,4 @@
-
+@import "./reusable/variables";
 .right-panel{
     @media (min-width:1024px){
         @apply h-full;
@@ -10,12 +10,18 @@
     > article:first-child{
         @apply bg-primary flex flex-col items-center relative pb-7;
         img {
-            @apply h-24 w-24 rounded-full ring-2 ring-white ;
+            @apply h-24 w-24 rounded-full ring-1 ring-white ;
             object-fit: cover;
         }
         span{
-            @apply absolute ml-20 w-6 h-6 bg-red-600 rounded-full;
+            @apply absolute ml-20 w-6 h-6;
             margin-top: 4.5rem;
+            div:first-child{
+                animation: blinker 1s forwards infinite;
+            }
+            div:not(:first-child){
+                background-color: $hover-text-color;
+            }
         }
         h3{
             @extend .text-secondary ;

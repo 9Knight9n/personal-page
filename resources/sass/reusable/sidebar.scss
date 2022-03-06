@@ -1,3 +1,4 @@
+@import "variables";
 .slider-container{
     @apply flex flex-col lg:flex-row relative;
     overflow-x: hidden;
@@ -30,6 +31,24 @@
         @extend .text-secondary ;
         @apply py-7 w-20 text-center;
         position: relative;
+    }
+
+    #sidebar-demo-list~ul{
+        overflow-y: hidden;
+        height: fit-content;
+        max-height: 0;
+        //box-sizing: border-box;
+        @apply p-0 ;
+        transition: max-height 1s;
+        box-shadow: inset 0 3px 8px 0 rgb(15 15 20 / 20%);
+        background-color: $tertiary-color;
+        li{
+            @apply py-2;
+        }
+    }
+
+    #sidebar-demo-list:checked~ul{
+        max-height: 100px;
     }
 
     i>span{
@@ -66,7 +85,7 @@
 
 
     .open-bar{
-        @apply py-2;
+        @apply py-2 flex flex-col;
         position:relative;
         width:100%;
         right:300px;
@@ -74,24 +93,24 @@
         opacity: 0;
     }
 
-    ul{
+    >ul{
         position:relative;
         display: flex;
         flex-direction: column;
-        @apply w-full h-full px-6 ;
+        @apply w-full h-full;
         justify-content:center;
     }
 
     li{
         @extend .text-secondary ;
-        @apply text-sm ;
+        @apply text-sm px-6  ;
         text-align:right;
 
     }
     li i{
         transition:transform 0.3s;
     }
-    li:hover>i{
+    li:hover i{
         @apply -rotate-90;
     }
 
@@ -119,7 +138,8 @@
     }
 
 }
-.slider-container .sidebar~.sidebar-dim{
+
+.slider-container .sidebar~.sidebar-content{
     @media (min-width: 1024px){
         transform: translateX(5rem);
         width: calc(100% - 5rem);
@@ -129,11 +149,21 @@
     height: 100%;
     transition: transform 1s;
 }
-.slider-container .drawer-toggle:checked~.sidebar~.sidebar-dim{
+.slider-container .drawer-toggle:checked~.sidebar~.sidebar-content{
     opacity:0.5;
     @media (min-width: 1024px){
         transform: translateX(15rem);
     }
+}
+.slider-container .drawer-toggle:checked~.sidebar~.sidebar-content .sidebar-dim{
+    width: 100%;
+    height: 100%;
+}
+.slider-container .sidebar~.sidebar-content .sidebar-dim{
+    z-index: 55;
+    position: absolute;
+    width: 0;
+    height: 0;
 }
 #my-scrollbar-2{
     @apply px-2 lg:px-7 w-full h-full;

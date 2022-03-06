@@ -30,36 +30,53 @@
         </div>
         <ul>
             <li class="open-bar" style="--n: 0s;">
-                خانه
+                <a href="index.php?page=home">
+                    خانه
+                </a>
             </li>
-            <li class="open-bar justify-between flex" style="--n: 0.1s">
-                <i class="fas fa-angle-left"></i>
-                <span>
-                نمونه کار
-            </span>
+            <li class="open-bar" style="--n: 0.1s">
+                <label for="sidebar-demo-list" class="w-full justify-between flex">
+                    <i class="fas fa-angle-left"></i>
+                    <span>
+                    نمونه کار
+                </span>
+                </label>
             </li>
+            <input type="checkbox" id="sidebar-demo-list" class="hidden">
+            <ul >
+                <li>
+                    <a href="index.php?page=demo">
+                        نمونه کار اول
+                    </a>
+                </li>
+<!--                <li>-->
+<!--                    نمونه کار اول-->
+<!--                </li>-->
+            </ul>
             <li class="open-bar" style="--n: 0.2s;">
-                تاریخچه
+                <a href="index.php?page=history">
+                    تاریخچه
+                </a>
             </li>
             <li class="open-bar" style="--n: 0.3s;">
-                فروشگاه
+                <a href="index.php?page=shop">
+                    فروشگاه
+                </a>
             </li>
-            <li class="open-bar justify-between flex" style="--n: 0.4s;">
-                <i class="fas fa-angle-left"></i>
-                <span>
-                بلاگ
-            </span>
+            <li class="open-bar" style="--n: 0.4s;">
+                <a href="index.php?page=blog">
+                    بلاگ
+                </a>
             </li>
             <li class="open-bar" style="--n: 0.5s;">
-                تماس با من
-            </li>
-            <li class="open-bar" style="--n: 0.6s;">
-                خانه تک صفحه
+                <a href="index.php?page=contact">
+                    تماس با من
+                </a>
             </li>
         </ul>
     </div>
-<!--    <label for="my-drawer-1" class="sidebar-dim">-->
-    <label class="sidebar-dim">
+    <div class="sidebar-content">
+        <label for="my-drawer-1" class="sidebar-dim"></label>
         <div id="my-scrollbar-2">
             <?php
                 if (!key_exists('page',$_GET) || $_GET['page'] == "home"){
@@ -101,5 +118,5 @@
                 </h5>
             </footer>
         </div>
-    </label>
+    </div>
 </div>

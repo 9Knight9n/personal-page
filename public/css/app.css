@@ -639,6 +639,19 @@ Ensure the default browser behavior of the `hidden` attribute.
     --tw-translate-x: 0px;
   }
 }
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
 .slider-container {
   position: relative;
   display: flex;
@@ -711,6 +724,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   text-align: center;
   position: relative;
 }
+.slider-container .sidebar #sidebar-demo-list ~ ul {
+  overflow-y: hidden;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-height: 0;
+  padding: 0px;
+  transition: max-height 1s;
+  box-shadow: inset 0 3px 8px 0 rgba(15, 15, 20, 0.2);
+  background-color: #191923;
+}
+.slider-container .sidebar #sidebar-demo-list ~ ul li {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+.slider-container .sidebar #sidebar-demo-list:checked ~ ul {
+  max-height: 100px;
+}
 .slider-container .sidebar i > span {
   position: absolute;
   top: 1rem;
@@ -745,6 +776,8 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin: auto;
 }
 .slider-container .sidebar .open-bar {
+  display: flex;
+  flex-direction: column;
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   position: relative;
@@ -753,17 +786,17 @@ Ensure the default browser behavior of the `hidden` attribute.
   transition: right 0.4s var(--n), opacity 0.8s;
   opacity: 0;
 }
-.slider-container .sidebar ul {
+.slider-container .sidebar > ul {
   position: relative;
   display: flex;
   flex-direction: column;
   height: 100%;
   width: 100%;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
   justify-content: center;
 }
 .slider-container .sidebar li {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
   text-align: right;
@@ -771,7 +804,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 .slider-container .sidebar li i {
   transition: transform 0.3s;
 }
-.slider-container .sidebar li:hover > i {
+.slider-container .sidebar li:hover i {
   --tw-rotate: -90deg;
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
@@ -798,26 +831,38 @@ Ensure the default browser behavior of the `hidden` attribute.
   right: 0;
 }
 
-.slider-container .sidebar ~ .sidebar-dim {
+.slider-container .sidebar ~ .sidebar-content {
   transform: translateX(0);
   overflow-y: hidden;
   height: 100%;
   transition: transform 1s;
 }
 @media (min-width: 1024px) {
-  .slider-container .sidebar ~ .sidebar-dim {
+  .slider-container .sidebar ~ .sidebar-content {
     transform: translateX(5rem);
     width: calc(100% - 5rem);
   }
 }
 
-.slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
+.slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-content {
   opacity: 0.5;
 }
 @media (min-width: 1024px) {
-  .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-dim {
+  .slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-content {
     transform: translateX(15rem);
   }
+}
+
+.slider-container .drawer-toggle:checked ~ .sidebar ~ .sidebar-content .sidebar-dim {
+  width: 100%;
+  height: 100%;
+}
+
+.slider-container .sidebar ~ .sidebar-content .sidebar-dim {
+  z-index: 55;
+  position: absolute;
+  width: 0;
+  height: 0;
 }
 
 #my-scrollbar-2 {
@@ -1568,6 +1613,19 @@ h6 {
   --tw-shadow-colored: 0 1px 3px 0 var(--tw-shadow-color), 0 1px 2px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
 .right-panel {
   display: flex;
   height: 100vh;
@@ -1598,7 +1656,7 @@ h6 {
   width: 6rem;
   border-radius: 9999px;
   --tw-ring-offset-shadow: var(--tw-ring-inset) 0 0 0 var(--tw-ring-offset-width) var(--tw-ring-offset-color);
-  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(2px + var(--tw-ring-offset-width)) var(--tw-ring-color);
+  --tw-ring-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width)) var(--tw-ring-color);
   box-shadow: var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow, 0 0 #0000);
   --tw-ring-opacity: 1;
   --tw-ring-color: rgb(255 255 255 / var(--tw-ring-opacity));
@@ -1610,10 +1668,14 @@ h6 {
   margin-left: 5rem;
   height: 1.5rem;
   width: 1.5rem;
-  border-radius: 9999px;
-  --tw-bg-opacity: 1;
-  background-color: rgb(220 38 38 / var(--tw-bg-opacity));
   margin-top: 4.5rem;
+}
+.right-panel > article:first-child span div:first-child {
+  -webkit-animation: blinker 1s forwards infinite;
+          animation: blinker 1s forwards infinite;
+}
+.right-panel > article:first-child span div:not(:first-child) {
+  background-color: #FFC107;
 }
 .right-panel > article:first-child h3 {
   margin-top: 0.125rem;
@@ -2070,7 +2132,7 @@ h6 {
   justify-content: space-between;
 }
 
-.sidebar ~ .sidebar-dim {
+.sidebar ~ .sidebar-content {
   background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
   background-size: 130% auto;
   background-repeat: no-repeat;

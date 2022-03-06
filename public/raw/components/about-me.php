@@ -1,11 +1,15 @@
-<?php
-echo "
+
 <section class='right-panel'>
     <article>
         <!--- ToDo : add pop up on click --->
 
         <img src='../../static/default_avatar_pic.jpg' alt='avatar pic'>
-        <span></span>
+        <span class='blinking-dot'>
+            <div>
+            </div>
+            <div>
+            </div>
+        </span>
         <h3>
             محمدسجاد نقی زاده
         </h3>
@@ -180,7 +184,3 @@ echo "
       <a href='https://twitter.com/' target='_blank'><i class='fab fa-twitter'></i></a>
     </article>
 </section>
-
-
-
-";
