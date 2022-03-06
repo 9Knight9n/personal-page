@@ -77,6 +77,10 @@
                 {
                     require "pages/history.php";
                 }
+                elseif ($_GET['page'] == "shop")
+                {
+                    require "pages/shop.php";
+                }
 
             ?>
             <footer class="footer">

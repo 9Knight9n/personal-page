@@ -1,0 +1,38 @@
+#shop{
+    direction: rtl;
+    @apply p-7 mb-7;
+    @extend .bg-primary;
+    >h6{
+        @apply text-xs;
+        @extend .text-secondary;
+    }
+    >h5{
+        @extend .article-title;
+        @apply text-2xl mt-4 mb-8;
+    }
+    >div{
+        @apply flex justify-between mb-5;
+        *{
+
+        }
+        >h6{
+            @apply text-base;
+            @extend .text-secondary;
+        }
+        >select{
+            outline: none;
+            @apply text-sm;
+            @extend .bg-primary , .text-secondary;
+            >option{
+                color: black;
+            }
+        }
+    }
+    >article{
+        @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7;
+        >article{
+            @extend .shop-item;
+        }
+    }
+
+}

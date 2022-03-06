@@ -1111,7 +1111,77 @@ Ensure the default browser behavior of the `hidden` attribute.
     transform: scale(1.5);
   }
 }
-.bg-primary, .footer, .history > article > div > div .blinking-dot ~ div, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-2 > div > div {
+@keyframes growProgressBar {
+  0%, 33% {
+    --pgPercentage: 0;
+  }
+  100% {
+    --pgPercentage: var(--value);
+  }
+}
+@property --pgPercentage {
+  syntax: "<number>";
+  inherits: false;
+  initial-value: 0;
+}
+.shop-item, #shop > article > article {
+  position: relative;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+.shop-item img, #shop > article > article img {
+  margin-bottom: 1rem;
+}
+.shop-item h6, #shop > article > article h6 {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+}
+.shop-item > div, #shop > article > article > div {
+  display: flex;
+}
+.shop-item span, #shop > article > article span {
+  display: none;
+}
+.shop-item button, #shop > article > article button {
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #FFC107;
+}
+.shop-item button i, #shop > article > article button i {
+  margin-left: 0.5rem;
+}
+
+.shop-item.off span, #shop > article > article.off span {
+  position: absolute;
+  left: 0px;
+  display: block;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  font-size: 0.75rem;
+  line-height: 1rem;
+  font-weight: 700;
+  background-color: #FFC107;
+}
+.shop-item.off > div > h6:first-child, #shop > article > article.off > div > h6:first-child {
+  margin-left: 0.75rem;
+  font-weight: 500;
+  text-decoration: line-through;
+}
+
+.bg-primary, .footer, #shop > div > select, #shop, .history > article > div > div .blinking-dot ~ div, .card, .home .feedback .splide__slide > div, .home .pricing > div > article, .home .services > div > article, .slider-container .sidebar > label.changing-icon, .card-2 > div > div {
   background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 
@@ -1127,7 +1197,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   background: #191923;
 }
 
-.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .history > article > div > div .blinking-dot ~ div > div > h5, .history > article > h5, .blog-1 > h5, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
+.text-primary, .demo h6.option:hover, .demo h6.option.active, .home .briefing > div .counter, .home .briefing > article > div > div > h1, .duos-text h6:nth-child(odd), .right-panel > article:not(:first-child):not(:last-child) h5, .right-panel > article:first-child span + h3, .card-title, .history > article > div > div .blinking-dot ~ div > div > h5, .history > article > h5, .blog-1 > h5, .home .feedback .splide__slide > div > h5, .home .pricing > div > article h5, .home .services > div > article h5, .article-title, #shop > h5, .home .feedback > h5, .home .pricing > h5, .home .services > h5, h6 {
   color: #FFFFFF;
   transition: color 0.5s;
 }
@@ -1142,7 +1212,7 @@ Ensure the default browser behavior of the `hidden` attribute.
   font-weight: bold;
 }
 
-.text-secondary, .footer h5, .history > article > div > div .blinking-dot ~ div > h6:nth-child(4), .history > article > div > div .blinking-dot ~ div > h6:nth-child(3), .history > article > div > div .blinking-dot ~ div > div > div, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li, .card-2 > div > div > div *, .card-2 > div > div > h6 {
+.text-secondary, .footer h5, #shop > div > select, #shop > div > h6, #shop > h6, .history > article > div > div .blinking-dot ~ div > h6:nth-child(4), .history > article > div > div .blinking-dot ~ div > h6:nth-child(3), .history > article > div > div .blinking-dot ~ div > div > div, .demo h6.option, .home .feedback .splide__slide > div > p, .home .feedback .splide__slide > div > h6, .home .pricing > div > article > span, .home .services > div > article h6, .duos-text h6:nth-child(even), .right-panel > article:last-child a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(9) a, .right-panel > article:not(:first-child):not(:last-child) > div > article:nth-child(7) h6, .right-panel > article:first-child h3, .responsive-sidebar.drawer.drawer-end .drawer-side .drawer-button, .slider-container .sidebar-mobile label i, .slider-container .sidebar-mobile > i, .slider-container .sidebar .close-bar i, .slider-container .sidebar label.changing-icon i, .slider-container .sidebar div > span, .slider-container .sidebar li, .card-2 > div > div > div *, .card-2 > div > div > h6, .shop-item.off > div > h6:first-child, #shop > article > article.off > div > h6:first-child {
   color: #8C8C8E;
 }
 
@@ -1171,7 +1241,7 @@ h6 {
   background: #FF0000;
 }
 
-.article-title, .home .feedback > h5, .home .pricing > h5, .home .services > h5 {
+.article-title, #shop > h5, .home .feedback > h5, .home .pricing > h5, .home .services > h5 {
   text-align: right;
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -1208,6 +1278,40 @@ h6 {
 }
 .show-more:hover > i, .home .pricing > div > article a:hover > i, .home .services > div > article a:hover > i {
   left: -10px;
+}
+
+.container {
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .container {
+    max-width: 640px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1536px) {
+  .container {
+    max-width: 1536px;
+  }
 }
 .fixed {
   position: fixed;
@@ -1481,7 +1585,7 @@ h6 {
   flex-direction: column;
   align-items: center;
   padding-bottom: 1.75rem;
-  background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 .right-panel > article:first-child img {
   height: 6rem;
@@ -1577,7 +1681,7 @@ h6 {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  background: linear-gradient(159deg, rgba(37, 37, 50, 0.98) 0%, rgba(35, 35, 45, 0.98) 100%);
+  background: linear-gradient(159deg, #2d2d3a 0%, #2b2b35 100%);
 }
 .right-panel > article:last-child a {
   margin-left: 0.5rem;
@@ -2219,7 +2323,52 @@ h6 {
   line-height: 1.25rem;
 }
 
+#shop {
+  direction: rtl;
+  margin-bottom: 1.75rem;
+  padding: 1.75rem;
+}
+#shop > h6 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+#shop > h5 {
+  margin-top: 1rem;
+  margin-bottom: 2rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+#shop > div {
+  margin-bottom: 1.25rem;
+  display: flex;
+  justify-content: space-between;
+}
+#shop > div > h6 {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+#shop > div > select {
+  outline: none;
+  font-size: 0.875rem;
+  line-height: 1.25rem;
+}
+#shop > div > select > option {
+  color: black;
+}
+#shop > article {
+  display: grid;
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+  gap: 1.75rem;
+}
+@media (min-width: 768px) {
+  #shop > article {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
 @media (min-width: 1024px) {
+  #shop > article {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
   .single-page {
     margin: auto;
   }
