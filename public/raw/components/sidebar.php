@@ -24,13 +24,13 @@
                 </button>
             </span>
             </i>
-            <span>
-            خانه
-        </span>
+            <span id="current-page">
+
+            </span>
         </div>
         <ul>
             <li class="open-bar" style="--n: 0s;">
-                <a href="index.php?page=home">
+                <a href="index.php?page=home" >
                     خانه
                 </a>
             </li>
@@ -120,3 +120,19 @@
         </div>
     </div>
 </div>
+<script>
+    let addr = window.location.href
+    let currentPageContainer = document.getElementById("current-page")
+    if (addr.endsWith("demo"))
+        currentPageContainer.innerText = "نمونه کار"
+    else if (addr.endsWith("home"))
+        currentPageContainer.innerText = "خانه"
+    else if (addr.endsWith("blog"))
+        currentPageContainer.innerText = "بلاگ"
+    else if (addr.endsWith("history"))
+        currentPageContainer.innerText = "تاریخچه"
+    else if (addr.endsWith("shop"))
+        currentPageContainer.innerText = "فروشگاه"
+    else if (addr.endsWith("contact"))
+        currentPageContainer.innerText = "تماس با من"
+</script>
