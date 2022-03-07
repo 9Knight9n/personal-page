@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Personal page</title>
-    <link rel="stylesheet" href="../css/smooth-scrollbar.css" integrity="sha512-YihuVdpo+ob7zhdbVJXGqGU/yHvY1N8J/kuC7cFvM9cXja+Q5XYGeQMbwBJsTWuez41tKxrJMukmu+lckvD7IQ==" />
+    <link rel="stylesheet" href="../css/smooth-scrollbar.css" />
     <link rel="stylesheet" href="../css/all.min.css"/>
     <link rel="stylesheet" href="../css/splide-default.min.css"/>
     <link href="../css/app.css" rel="stylesheet">
@@ -14,7 +14,7 @@
         require "./components/responsive-sidebar.php";
     ?>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scrollbar/7.4.1/smooth-scrollbar.js" integrity="sha512-Oc9BKjC3rDeHWtFx4S/caKGibBAG7E0ncexJB8Rz15A4j5Q5EAmdF2RRqKCE7idcNIFF4OF9Zkd8A/jonP8O1w==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/smooth-scrollbar.js"></script>
 
     <script>
         const Scrollbar = window.Scrollbar;
@@ -37,7 +37,7 @@
     </script>
 
 
-    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="../js/splide.min.js"></script>
     <script>
         if (document.getElementsByClassName("splide").length > 0)
         {
