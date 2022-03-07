@@ -1,10 +1,9 @@
 {
     "/js/app.js": "/js/app.js",
+    "/css/app.css": "/css/app.css",
     "/webfonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2": "/webfonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2",
     "/webfonts/Mikhak-VF[wght,KSHD,DSTY].ttf": "/webfonts/Mikhak-VF[wght,KSHD,DSTY].ttf",
     "/webfonts/Mikhak-VF[wght,KSHD,DSTY].woff2": "/webfonts/Mikhak-VF[wght,KSHD,DSTY].woff2",
     "/webfonts/Vazir-Regular.ttf": "/webfonts/Vazir-Regular.ttf",
-    "/css/app.css": "/css/app.css",
-    "/static/bg-1.jpg": "/static/bg-1.jpg",
-    "/static/face-2.png": "/static/face-2.png"
+    "/static/bg-1.jpg": "/static/bg-1.jpg"
 }

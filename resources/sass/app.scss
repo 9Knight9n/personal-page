@@ -20,6 +20,7 @@
 
 
 .single-page{
+    overflow-x: hidden;
     @media (min-width:1024px){
         @apply p-4 m-auto;
         max-width: 1470px;

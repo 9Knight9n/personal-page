@@ -148,17 +148,18 @@
 
     let sizes = {}
 
+    for(let j = 0;j<list1.length;j++)
+    {
+        getHeight(list1[j].src)
+    }
+
     let timer;
 
     async function displayList(list, index) {
 
 
-        sizes = {}
-        for(let j = 0;j<list.length;j++)
-        {
-            getHeight(list[j].src,j)
-        }
-        await delay(500).then(() => console.log(''))
+
+        // await delay(500).then(() => console.log(''))
         let h1=0;
         let h2=0;
 
@@ -210,12 +211,12 @@
             if (h2 >= h1)
             {
                 col1.innerHTML += content;
-                h1 += sizes[i.toString()]
+                h1 += sizes[list[i].src]
             }
             else
             {
                 col2.innerHTML += content;
-                h2 += sizes[i.toString()]
+                h2 += sizes[list[i].src]
             }
         }
     }
@@ -229,21 +230,22 @@
         }
     }
 
-    displayList(list1, 0);
 
-
-    function getHeight(url,id) {
+    function getHeight(url) {
         let img = new Image();
         img.onload = function () {
             let height = img.height;
             let width = img.width;
-            sizes[id.toString()] = height / width;
+            sizes[url] = height / width;
         }
         img.src = url
     }
 
-    function delay(time) {
-        return new Promise(resolve => setTimeout(resolve, time));
-    }
+    // function delay(time) {
+    //     return new Promise(resolve => setTimeout(resolve, time));
+    // }
+
+
+    // window.onload = function(){ displayList(list1, 0); }
 
 </script>

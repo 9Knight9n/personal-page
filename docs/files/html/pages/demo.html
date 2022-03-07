@@ -9,9 +9,13 @@
     <link href="../css/extra.css" rel="stylesheet">
     <link href="../css/app.css" rel="stylesheet">
 </head>
-<body class="single-page">
 
-    <div class="responsive-sidebar shadow drawer drawer-end drawer-mobile h-full">
+<body class="bg-tertiary">
+    <div id="loading"><div></div></div>
+    <div class="single-page w-full h-full">
+
+
+        <div class="responsive-sidebar shadow drawer drawer-end drawer-mobile h-full">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle">
     <div class="flex flex-col items-center justify-center drawer-content">
         <div class="h-full w-full slider-container" style="display: flex; overflow-y: hidden">
@@ -244,17 +248,18 @@
 
     let sizes = {}
 
+    for(let j = 0;j<list1.length;j++)
+    {
+        getHeight(list1[j].src)
+    }
+
     let timer;
 
     async function displayList(list, index) {
 
 
-        sizes = {}
-        for(let j = 0;j<list.length;j++)
-        {
-            getHeight(list[j].src,j)
-        }
-        await delay(500).then(() => console.log(''))
+
+        // await delay(500).then(() => console.log(''))
         let h1=0;
         let h2=0;
 
@@ -306,12 +311,12 @@
             if (h2 >= h1)
             {
                 col1.innerHTML += content;
-                h1 += sizes[i.toString()]
+                h1 += sizes[list[i].src]
             }
             else
             {
                 col2.innerHTML += content;
-                h2 += sizes[i.toString()]
+                h2 += sizes[list[i].src]
             }
         }
     }
@@ -325,22 +330,23 @@
         }
     }
 
-    displayList(list1, 0);
 
-
-    function getHeight(url,id) {
+    function getHeight(url) {
         let img = new Image();
         img.onload = function () {
             let height = img.height;
             let width = img.width;
-            sizes[id.toString()] = height / width;
+            sizes[url] = height / width;
         }
         img.src = url
     }
 
-    function delay(time) {
-        return new Promise(resolve => setTimeout(resolve, time));
-    }
+    // function delay(time) {
+    //     return new Promise(resolve => setTimeout(resolve, time));
+    // }
+
+
+    // window.onload = function(){ displayList(list1, 0); }
 
 </script>
             <footer class="footer">
@@ -575,6 +581,21 @@
 
 
 
+    </div>
+
+    <script>
+        function endLoading(){
+            // document.getElementById('loading').style.display = 'none'
+            document.getElementById('loading').remove()
+        }
+        if (document.getElementsByClassName('demo').length>0)
+            window.onload = function(){ displayList(list1, 0);endLoading(); }
+        else
+            window.onload = function(){ endLoading(); }
+    </script>
+
+
+
 
     <script src="../js/smooth-scrollbar.js"></script>
 
@@ -657,6 +678,7 @@
         if (document.getElementById("typing-text") !== null)
             typeWriter();
     </script>
+
 
 </body>
 </html>

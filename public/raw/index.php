@@ -9,11 +9,30 @@
     <link href="../css/extra.css" rel="stylesheet">
     <link href="../css/app.css" rel="stylesheet">
 </head>
-<body class="single-page">
 
-    <?php
+<body class="bg-tertiary">
+    <div id="loading"><div></div></div>
+    <div class="single-page w-full h-full">
+
+
+        <?php
         require "./components/responsive-sidebar.php";
-    ?>
+        ?>
+    </div>
+
+    <script>
+        function endLoading(){
+            // document.getElementById('loading').style.display = 'none'
+            document.getElementById('loading').remove()
+        }
+        if (document.getElementsByClassName('demo').length>0)
+            window.onload = function(){ displayList(list1, 0);endLoading(); }
+        else
+            window.onload = function(){ endLoading(); }
+    </script>
+
+
+
 
     <script src="../js/smooth-scrollbar.js"></script>
 
@@ -96,6 +115,7 @@
         if (document.getElementById("typing-text") !== null)
             typeWriter();
     </script>
+
 
 </body>
 </html>
