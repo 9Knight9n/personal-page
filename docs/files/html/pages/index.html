@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        let addr = window.location.href
+        if (addr.includes("index.html?page=demo"))
+            window.location.href = addr.replace("index.html?page=demo","demo.html")
+        else if (addr.includes("index.html?page=blog"))
+            window.location.href = addr.replace("index.html?page=blog","blog.html")
+        else if (addr.includes("index.html?page=history"))
+            window.location.href = addr.replace("index.html?page=history","history.html")
+        else if (addr.includes("index.html?page=shop"))
+            window.location.href = addr.replace("index.html?page=shop","shop.html")
+        else if (addr.includes("index.html?page=contact"))
+            window.location.href = addr.replace("index.html?page=contact","contact.html")
+        else if (addr.includes("index.html?page=home"))
+            window.location.href = addr.replace("index.html?page=home","home.html")
+    </script>
+</head>
+<body>
+hello
+</body>
+</html>
+
