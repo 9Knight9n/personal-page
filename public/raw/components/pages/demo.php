@@ -246,6 +246,6 @@
     // }
 
 
-    // window.onload = function(){ displayList(list1, 0); }
+    window.onload = function(){ displayList(list1, 0); }
 
 </script>

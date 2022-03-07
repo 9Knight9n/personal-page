@@ -10,9 +10,9 @@
     <link href="../css/app.css" rel="stylesheet">
 </head>
 
-<body class="bg-tertiary">
-    <div id="loading"><div></div></div>
-    <div class="single-page w-full h-full">
+<body class="single-page">
+<!--    <div id="loading"><div></div></div>-->
+<!--    <div class="single-page w-full h-full">-->
 
 
         <div class="responsive-sidebar shadow drawer drawer-end drawer-mobile h-full">
@@ -50,7 +50,7 @@
         </div>
         <ul>
             <li class="open-bar" style="--n: 0s;">
-                <a href="index.html?page=home" >
+                <a href="index.php?page=home" >
                     خانه
                 </a>
             </li>
@@ -65,7 +65,7 @@
             <input type="checkbox" id="sidebar-demo-list" class="hidden">
             <ul class="open-bar" style="--n: 0.1s">
                 <li class="open-bar">
-                    <a href="index.html?page=demo">
+                    <a href="index.php?page=demo">
                         نمونه کار اول
                     </a>
                 </li>
@@ -74,22 +74,22 @@
 <!--                </li>-->
             </ul>
             <li class="open-bar" style="--n: 0.2s;">
-                <a href="index.html?page=history">
+                <a href="index.php?page=history">
                     تاریخچه
                 </a>
             </li>
             <li class="open-bar" style="--n: 0.3s;">
-                <a href="index.html?page=shop">
+                <a href="index.php?page=shop">
                     فروشگاه
                 </a>
             </li>
             <li class="open-bar" style="--n: 0.4s;">
-                <a href="index.html?page=blog">
+                <a href="index.php?page=blog">
                     بلاگ
                 </a>
             </li>
             <li class="open-bar" style="--n: 0.5s;">
-                <a href="index.html?page=contact">
+                <a href="index.php?page=contact">
                     تماس با من
                 </a>
             </li>
@@ -418,18 +418,18 @@
 
 
 
-    </div>
+<!--    </div>-->
 
-    <script>
-        function endLoading(){
-            // document.getElementById('loading').style.display = 'none'
-            document.getElementById('loading').remove()
-        }
-        if (document.getElementsByClassName('demo').length>0)
-            window.onload = function(){ displayList(list1, 0);endLoading(); }
-        else
-            window.onload = function(){ endLoading(); }
-    </script>
+<!--    <script>-->
+<!--        function endLoading(){-->
+<!--            // document.getElementById('loading').style.display = 'none'-->
+<!--            document.getElementById('loading').remove()-->
+<!--        }-->
+<!--        if (document.getElementsByClassName('demo').length>0)-->
+<!--            window.onload = function(){ displayList(list1, 0);endLoading(); }-->
+<!--        else-->
+<!--            window.onload = function(){ endLoading(); }-->
+<!--    </script>-->
 
 
 
