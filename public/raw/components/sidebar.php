@@ -35,16 +35,16 @@
                 </a>
             </li>
             <li class="open-bar" style="--n: 0.1s">
-                <label for="sidebar-demo-list" class="w-full justify-between flex">
+                <label style="cursor: pointer" for="sidebar-demo-list" class="w-full justify-between flex">
                     <i class="fas fa-angle-left"></i>
                     <span>
-                    نمونه کار
-                </span>
+                        نمونه کار
+                    </span>
                 </label>
             </li>
             <input type="checkbox" id="sidebar-demo-list" class="hidden">
-            <ul >
-                <li>
+            <ul class="open-bar" style="--n: 0.1s">
+                <li class="open-bar">
                     <a href="index.php?page=demo">
                         نمونه کار اول
                     </a>
