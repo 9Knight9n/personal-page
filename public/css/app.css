@@ -886,6 +886,7 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 
 .changing-icon {
+  cursor: pointer;
   position: relative;
 }
 .changing-icon i {
@@ -1457,9 +1458,6 @@ h6 {
 }
 .flex-grow {
   flex-grow: 1;
-}
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
 }
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
