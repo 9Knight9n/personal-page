@@ -3,11 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
-    <script>
-        let addr = window.location.href
-        window.location.href = addr.replace("index.html","files/html/pages/home.html")
-    </script>
+<!--    <script>-->
+<!--        let addr = window.location.href-->
+<!--        window.location.href = addr.replace("index.html","files/html/pages/home.html")-->
+<!--    </script>-->
 </head>
 <body>
+    <a href="files/html/pages/home.html" id="to-home-link"></a>
+    <script>
+        document.getElementById("to-home-link").click()
+    </script>
 </body>
 </html>
