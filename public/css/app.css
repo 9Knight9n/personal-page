@@ -2428,6 +2428,10 @@ h6 {
   line-height: 1.25rem;
 }
 
+.history ~ footer {
+  height: 6rem;
+}
+
 #shop {
   direction: rtl;
   margin-bottom: 1.75rem;

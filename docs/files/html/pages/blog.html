@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal page</title>
+    <link rel="stylesheet" href="../css/smooth-scrollbar.css" />
+    <link rel="stylesheet" href="../css/all.min.css"/>
+    <link rel="stylesheet" href="../css/splide-default.min.css"/>
+    <link href="../css/extra.css" rel="stylesheet">
+    <link href="../css/app.css" rel="stylesheet">
+</head>
+<body class="single-page">
+
+    <div class="responsive-sidebar shadow drawer drawer-end drawer-mobile h-full">
+    <input id="my-drawer-2" type="checkbox" class="drawer-toggle">
+    <div class="flex flex-col items-center justify-center drawer-content">
+        <div class="h-full w-full slider-container" style="display: flex; overflow-y: hidden">
+    <input id="my-drawer-1" type="checkbox" class="drawer-toggle">
+    <div class="sidebar-mobile">
+        <label for="my-drawer-1" class="changing-icon">
+            <i class="fas fa-bars" ></i>
+            <i class="fas fa-times" ></i>
+        </label>
+    </div>
+    <div class="sidebar">
+
+        <label for="my-drawer-1" class="changing-icon">
+            <i class="fas fa-bars" ></i>
+            <i class="fas fa-times" ></i>
+        </label>
+
+
+        <div class="close-bar">
+            <i class="fas fa-shopping-cart">
+            <span class="flex-grow text-right">
+                <button type="button" class="w-4 h-4 text-xs  rounded-full text-white">
+                    <span class="p-1">
+                        7
+                    </span>
+                </button>
+            </span>
+            </i>
+            <span id="current-page">
+
+            </span>
+        </div>
+        <ul>
+            <li class="open-bar" style="--n: 0s;">
+                <a href="index.php?page=home" >
+                    خانه
+                </a>
+            </li>
+            <li class="open-bar" style="--n: 0.1s">
+                <label style="cursor: pointer" for="sidebar-demo-list" class="w-full justify-between flex">
+                    <i class="fas fa-angle-left"></i>
+                    <span>
+                        نمونه کار
+                    </span>
+                </label>
+            </li>
+            <input type="checkbox" id="sidebar-demo-list" class="hidden">
+            <ul class="open-bar" style="--n: 0.1s">
+                <li class="open-bar">
+                    <a href="index.php?page=demo">
+                        نمونه کار اول
+                    </a>
+                </li>
+<!--                <li>-->
+<!--                    نمونه کار اول-->
+<!--                </li>-->
+            </ul>
+            <li class="open-bar" style="--n: 0.2s;">
+                <a href="index.php?page=history">
+                    تاریخچه
+                </a>
+            </li>
+            <li class="open-bar" style="--n: 0.3s;">
+                <a href="index.php?page=shop">
+                    فروشگاه
+                </a>
+            </li>
+            <li class="open-bar" style="--n: 0.4s;">
+                <a href="index.php?page=blog">
+                    بلاگ
+                </a>
+            </li>
+            <li class="open-bar" style="--n: 0.5s;">
+                <a href="index.php?page=contact">
+                    تماس با من
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="sidebar-content" style="background-image: url(../../static/bg-1.jpg);">
+        <label for="my-drawer-1" class="sidebar-dim"></label>
+        <div id="my-scrollbar-2">
+            <section class="blog-1">
+    <h5>
+        بلاگ
+    </h5>
+    <div class="splide">
+        <div class="splide__track">
+            <ul class="splide__list">
+                <li class="splide__slide card-2">
+                    <div>
+                        <img src='../../../static/blog-7-1-800x1066.jpg' alt='demo-pic' style="overflow: hidden">
+
+                        <div>
+                            <div>
+                                <h6>
+                                    3 مهر 1399
+                                </h6>
+                                <h6>
+                                    تکنولوژی, رویداد, طراحی
+                                </h6>
+                            </div>
+                            <h5 class='card-title'>
+                                ۱۵ روش خلاقانه طراحی پوستر
+                            </h5>
+                            <h6>
+                                در سه دهه آخر قرن نوزدهم میلادی ، بر اثر تحولات مصور سازی و پیوند نزدیکی که بین نقاشی و…
+                            </h6>
+                            <a href='#' class='show-more'>
+                                بیشتر بخوانید
+                                <i class='fas fa-angle-left'></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide card-2">
+                    <div>
+                        <img src='../../../static/blog-4-scaled-1-1-800x1218.jpg' alt='demo-pic' style="overflow: hidden">
+
+                        <div>
+                            <div>
+                                <h6>
+                                    3 مهر 1399
+                                </h6>
+                                <h6>
+                                    تکنولوژی, طراحی
+                                </h6>
+                            </div>
+                            <h5 class='card-title'>
+                                لزوم مراقبت از برند
+                            </h5>
+                            <h6>
+                                در سه دهه آخر قرن نوزدهم میلادی ، بر اثر تحولات مصور سازی و پیوند نزدیکی که بین نقاشی و…
+                            </h6>
+                            <a href='#' class='show-more'>
+                                بیشتر بخوانید
+                                <i class='fas fa-angle-left'></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide card-2">
+                    <div>
+                        <img src='../../../static/blog-2-1-800x913.jpg' alt='demo-pic' style="overflow: hidden">
+
+                        <div>
+                            <div>
+                                <h6>
+                                    3 مهر 1399
+                                </h6>
+                                <h6>
+                                    رویداد, طبیعت
+                                </h6>
+                            </div>
+                            <h5 class='card-title'>
+                                ابزارهای اصلی یک طراح
+                            </h5>
+                            <h6>
+                                در سه دهه آخر قرن نوزدهم میلادی ، بر اثر تحولات مصور سازی و پیوند نزدیکی که بین نقاشی و…
+                            </h6>
+                            <a href='#' class='show-more'>
+                                بیشتر بخوانید
+                                <i class='fas fa-angle-left'></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide card-2">
+                    <div>
+                        <img src='../../../static/blog-6-1.jpg' alt='demo-pic' style="overflow: hidden">
+
+                        <div>
+                            <div>
+                                <h6>
+                                    3 مهر 1399
+                                </h6>
+                                <h6>
+                                    رویداد, طبیعت
+                                </h6>
+                            </div>
+                            <h5 class='card-title'>
+                                مینیمالیسم و طراحی مینیمال
+                            </h5>
+                            <h6>
+                                در سه دهه آخر قرن نوزدهم میلادی ، بر اثر تحولات مصور سازی و پیوند نزدیکی که بین نقاشی و…
+                            </h6>
+                            <a href='#' class='show-more'>
+                                بیشتر بخوانید
+                                <i class='fas fa-angle-left'></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide card-2">
+                    <div>
+                        <img src='../../../static/blog-3-1.jpg' alt='demo-pic' style="overflow: hidden">
+
+                        <div>
+                            <div>
+                                <h6>
+                                    3 مهر 1399
+                                </h6>
+                                <h6>
+                                    طبیعت, طراحی
+                                </h6>
+                            </div>
+                            <h5 class='card-title'>
+                                ترندهای طراحی لوگو ۲۰۲۰
+                            </h5>
+                            <h6>
+                                در سه دهه آخر قرن نوزدهم میلادی ، بر اثر تحولات مصور سازی و پیوند نزدیکی که بین نقاشی و…
+                            </h6>
+                            <a href='#' class='show-more'>
+                                بیشتر بخوانید
+                                <i class='fas fa-angle-left'></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+                <li class="splide__slide card-2">
+                    <div>
+                        <img src='../../../static/blog-1-scaled-1-1-800x1200.jpg' alt='demo-pic' style="overflow: hidden">
+
+                        <div>
+                            <div>
+                                <h6>
+                                    3 مهر 1399
+                                </h6>
+                                <h6>
+                                    تکنولوژی, طراحی
+                                </h6>
+                            </div>
+                            <h5 class='card-title'>
+                                نقاشی خیابانی مدرن
+                            </h5>
+                            <h6>
+                                در سه دهه آخر قرن نوزدهم میلادی ، بر اثر تحولات مصور سازی و پیوند نزدیکی که بین نقاشی و…
+                            </h6>
+                            <a href='#' class='show-more'>
+                                بیشتر بخوانید
+                                <i class='fas fa-angle-left'></i>
+                            </a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</section>
+            <footer class="footer">
+                <h5>
+                    <a>
+                        naghizadehmdsd@gmail.com
+                    </a>
+                    :ایمیل
+                </h5>
+                <h5>
+                    .
+                    تمامی حفوق برای آرتر محفوظ است
+                    ©
+                </h5>
+            </footer>
+        </div>
+    </div>
+</div>
+<script>
+    let addr = window.location.href
+    let currentPageContainer = document.getElementById("current-page")
+    if (addr.endsWith("demo"))
+        currentPageContainer.innerText = "نمونه کار"
+    else if (addr.endsWith("home"))
+        currentPageContainer.innerText = "خانه"
+    else if (addr.endsWith("blog"))
+        currentPageContainer.innerText = "بلاگ"
+    else if (addr.endsWith("history"))
+        currentPageContainer.innerText = "تاریخچه"
+    else if (addr.endsWith("shop"))
+        currentPageContainer.innerText = "فروشگاه"
+    else if (addr.endsWith("contact"))
+        currentPageContainer.innerText = "تماس با من"
+</script>
+    </div>
+    <div class="drawer-side">
+        <label for="my-drawer-2" class="drawer-overlay"></label>
+        <div>
+            <label for="my-drawer-2" class="drawer-button">
+                <i class="fas fa-ellipsis-v"></i>
+            </label>
+            
+<section class='right-panel'>
+    <article>
+        <!--- ToDo : add pop up on click --->
+
+        <img src='../../static/default_avatar_pic.jpg' alt='avatar pic'>
+        <span class='blinking-dot'>
+            <div>
+            </div>
+            <div>
+            </div>
+        </span>
+        <h3>
+            محمدسجاد نقی زاده
+        </h3>
+        <h3>
+            توسعه دهنده وب
+        </h3>
+        <h3>
+            طراح رابط کاربری
+        </h3>
+    </article>
+    <article data-scrollbar>
+        <article class='duos-text'>
+            <h6>
+                :محل سکونت
+            </h6>
+            <h6>
+                کرمان
+            </h6>
+            <h6>
+                :شهر
+            </h6>
+            <h6>
+                کرمان
+            </h6>
+            <h6>
+                :سن
+            </h6>
+            <h6>
+                22
+            </h6>
+        </article>
+        <hr>
+        <article>
+            <h5>
+                زبان ها
+            </h5>
+            <div class='px-3'><div class='circular-progress-bar' role='progressbar' aria-valuenow='65' aria-valuemin='0' aria-valuemax='100' style='--value:65'></div></div>
+            <div class='px-3'><div class='circular-progress-bar' role='progressbar' aria-valuenow='40' aria-valuemin='0' aria-valuemax='100' style='--value:40'></div></div>
+            <div class='px-3'><div class='circular-progress-bar' role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100' style='--value:90'></div></div>
+            <h6>
+                فرانسوی
+            </h6>
+            <h6>
+                انگلیسی
+            </h6>
+            <h6>
+                اسپانیایی
+            </h6>
+
+
+        </article>
+        <hr>
+        <article>
+            <h5>
+                کدنویسی
+            </h5>
+            <article class='duos-text'>
+                <h6>
+                    html
+                </h6>
+                <h6>
+                 90%
+                </h6>
+                <div class='linear-progress-bar'>
+                    <div>
+                        <div role='progressbar' aria-valuenow='90' aria-valuemin='0' aria-valuemax='100' style='--value:90'>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class='duos-text'>
+                <h6>
+                    CSS
+                </h6>
+                <h6>
+                 95%
+                </h6>
+                <div class='linear-progress-bar'>
+                    <div>
+                        <div role='progressbar' aria-valuenow='95' aria-valuemin='0' aria-valuemax='100' style='--value:95'>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class='duos-text'>
+                <h6>
+                    جاوااسکریپت
+                </h6>
+                <h6>
+                 75%
+                </h6>
+                <div class='linear-progress-bar'>
+                    <div>
+                        <div role='progressbar' aria-valuenow='75' aria-valuemin='0' aria-valuemax='100' style='--value:75'>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class='duos-text'>
+                <h6>
+                    PHP
+                </h6>
+                <h6>
+                 65%
+                </h6>
+                <div class='linear-progress-bar'>
+                    <div>
+                        <div role='progressbar' aria-valuenow='65' aria-valuemin='0' aria-valuemax='100' style='--value:65'>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class='duos-text'>
+                <h6>
+                    وردپرس
+                </h6>
+                <h6>
+                 85%
+                </h6>
+                <div class='linear-progress-bar'>
+                    <div>
+                        <div role='progressbar' aria-valuenow='85' aria-valuemin='0' aria-valuemax='100' style='--value:85'>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </article>
+        <hr>
+        <article>
+            <h5>
+                مهارت ها
+            </h5>
+            <div>
+                <i class='fas fa-check'></i>
+                <h6>
+                    فتوشاپ
+                </h6>
+            </div>
+            <div>
+                <i class='fas fa-check'></i>
+                <h6>
+                    ایلاستریتور
+                </h6>
+            </div>
+            <div>
+                <i class='fas fa-check'></i>
+                <h6>
+                    فیگما
+                </h6>
+            </div>
+            <div>
+                <i class='fas fa-check'></i>
+                <h6>
+                    اسکچ
+                </h6>
+            </div>
+        </article>
+        <hr>
+        <article>
+            <a href='#'>
+                <i class='fas fa-download'></i>
+                دانلود رزومه
+
+            </a>
+        </article>
+    </article>
+    <article>
+      <a href='https://linkedin.com/' target='_blank'><i class='fab fa-linkedin'></i></a>
+      <a href='https://dribble.com/' target='_blank'><i class='fab fa-dribbble'></i></a>
+      <a href='https://behance.com/' target='_blank'><i class='fab fa-behance'></i></a>
+      <a href='https://github.com/' target='_blank'><i class='fab fa-github'></i></a>
+      <a href='https://twitter.com/' target='_blank'><i class='fab fa-twitter'></i></a>
+    </article>
+</section>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+    <script src="../js/smooth-scrollbar.js"></script>
+
+    <script>
+        const Scrollbar = window.Scrollbar;
+
+        Scrollbar.init(document.querySelector('#my-scrollbar-2'), {
+            // speed:1.2,
+            damping:0.08,
+            // alwaysShowTracks:true,
+            // continuousScrolling:true
+            overscrollEffect:"bounce"
+        });
+
+        Scrollbar.initAll({
+            // speed:1.2,
+            damping:0.08,
+            // alwaysShowTracks:true,
+            // continuousScrolling:true
+            overscrollEffect:"bounce"
+        });
+    </script>
+
+
+    <script src="../js/splide.min.js"></script>
+    <script>
+        if (document.getElementsByClassName("splide").length > 0)
+        {
+            var splide = new Splide( '.splide', {
+                // type   : 'loop',
+                perPage: 2,
+                perMove: 1,
+                autoWidth: true,
+                // height   : '10rem',
+                direction: 'rtl',
+            } );
+
+            splide.mount();
+        }
+
+    </script>
+
+    <script>
+        var i = 0;
+        var index = 0;
+        var increasing = true;
+        var txt = ["وب سایت" , "وب اپلیکشن" , "اپلیکشن موبایل" , "رابط کاربری" ];
+        var speed = 150;
+
+        function typeWriter() {
+            if (index === txt.length)
+                index=0;
+            if (increasing)
+            {
+                if (i < txt[index].length) {
+                    document.getElementById("typing-text").innerHTML += txt[index].charAt(i);
+                    i++;
+                    setTimeout(typeWriter, speed);
+                }
+                else {
+                    increasing = false;
+                    setTimeout(typeWriter, 10*speed);
+                }
+            }
+            else
+            {
+                if (i >-1) {
+                    document.getElementById("typing-text").innerHTML = txt[index].substring(0,i);
+                    i--;
+                    setTimeout(typeWriter, speed/3);
+                }
+                else {
+                    increasing = true;
+                    index++;
+                    setTimeout(typeWriter, 10*speed);
+                }
+            }
+
+        }
+        if (document.getElementById("typing-text") !== null)
+            typeWriter();
+    </script>
+
+</body>
+</html>
