@@ -6,7 +6,6 @@
         @apply w-full h-96 mt-16;
         >article{
             @apply w-full h-80 relative flex justify-center;
-            background-image: url(../assets/image/bg-1.jpg);
             background-position: center;
             background-size: 100% auto;
             >section{
@@ -181,7 +180,6 @@
 }
 
 .sidebar~.sidebar-content{
-    background-image: url(../assets/image/bg-1.jpg);
     //background-position: center;
     background-size: 130% auto;
     background-repeat: no-repeat;

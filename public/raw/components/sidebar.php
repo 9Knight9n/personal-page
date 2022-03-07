@@ -75,7 +75,7 @@
             </li>
         </ul>
     </div>
-    <div class="sidebar-content">
+    <div class="sidebar-content" style="background-image: url(../../static/bg-1.jpg);">
         <label for="my-drawer-1" class="sidebar-dim"></label>
         <div id="my-scrollbar-2">
             <?php

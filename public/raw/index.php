@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="../css/smooth-scrollbar.css" />
     <link rel="stylesheet" href="../css/all.min.css"/>
     <link rel="stylesheet" href="../css/splide-default.min.css"/>
+    <link href="../css/extra.css" rel="stylesheet">
     <link href="../css/app.css" rel="stylesheet">
 </head>
 <body class="single-page">

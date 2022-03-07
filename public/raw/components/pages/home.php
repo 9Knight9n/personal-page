@@ -1,6 +1,6 @@
 <section class="home">
     <article class="briefing">
-        <article>
+        <article style="background-image: url('../../../static/bg-1.jpg');">
             <section>
             </section>
             <div>

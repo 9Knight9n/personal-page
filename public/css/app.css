@@ -1460,9 +1460,6 @@ h6 {
 .flex-grow {
   flex-grow: 1;
 }
-.transform {
-  transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
-}
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
 }
@@ -1853,7 +1850,6 @@ h6 {
   height: 20rem;
   width: 100%;
   justify-content: center;
-  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
   background-position: center;
   background-size: 100% auto;
 }
@@ -2135,7 +2131,6 @@ h6 {
 }
 
 .sidebar ~ .sidebar-content {
-  background-image: url(/images/bg-1.jpg?a73b42a87d8984c24daf2b6a86e0ef26);
   background-size: 130% auto;
   background-repeat: no-repeat;
   background-position: 0 -130px;
@@ -2697,14 +2692,14 @@ h6 {
     padding-right: 2rem;
   }
 }
-@font-face {
-    src: url(/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2?bb913d24dc1414ef1f10951d90409ccc) ;
-    /*src: url("../assets/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].ttf");*/
-    font-family: "mikhak";
-}
+/*@font-face {*/
+/*    src: url(../assets/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].woff2) ;*/
+/*    !*src: url("../assets/fonts/Mikhak-VF-FD[wght,KSHD,DSTY].ttf");*!*/
+/*    font-family: "mikhak";*/
+/*}*/
 
 
-body{
-    font-family: 'mikhak', serif;
-}
+/*body{*/
+/*    font-family: 'mikhak', serif;*/
+/*}*/
 
