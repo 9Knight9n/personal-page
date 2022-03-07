@@ -24,13 +24,13 @@
                 </button>
             </span>
             </i>
-            <span>
-            خانه
-        </span>
+            <span id="current-page">
+
+            </span>
         </div>
         <ul>
             <li class="open-bar" style="--n: 0s;">
-                <a href="index.php?page=home">
+                <a href="index.php?page=home" >
                     خانه
                 </a>
             </li>
@@ -77,46 +77,62 @@
     </div>
     <div class="sidebar-content">
         <label for="my-drawer-1" class="sidebar-dim"></label>
-        <div id="my-scrollbar-2"></div>
+        <div id="my-scrollbar-2">
+            <?php
+                if (!key_exists('page',$_GET) || $_GET['page'] == "home"){
+                    require "pages/home.php";
+                }
+                elseif ($_GET['page'] == "demo")
+                {
+                    require "pages/demo.php";
+                }
+                elseif ($_GET['page'] == "blog")
+                {
+                    require "pages/blog.php";
+                }
+                elseif ($_GET['page'] == "history")
+                {
+                    require "pages/history.php";
+                }
+                elseif ($_GET['page'] == "shop")
+                {
+                    require "pages/shop.php";
+                }
+                elseif ($_GET['page'] == "contact")
+                {
+                    require "pages/contact.php";
+                }
 
+            ?>
+            <footer class="footer">
+                <h5>
+                    <a>
+                        naghizadehmdsd@gmail.com
+                    </a>
+                    :ایمیل
+                </h5>
+                <h5>
+                    .
+                    تمامی حفوق برای آرتر محفوظ است
+                    ©
+                </h5>
+            </footer>
+        </div>
     </div>
 </div>
 <script>
-
-    async function fetchHtmlAsText(url) {
-        return await (await fetch(url)).text();
-    }
-    // let container_main = document.getElementById("my-scrollbar-2")
-    async function loadHome(page) {
-        // load("components/pages/"+page,"my-scrollbar-2")
-        const contentDiv = document.getElementById("my-scrollbar-2");
-        contentDiv.innerHTML = await fetchHtmlAsText("components/pages/"+page);
-        console.log(await fetchHtmlAsText("components/pages/"+page))
-
-        contentDiv.innerHTML += '<footer class="footer"><h5><a>naghizadehmdsd@gmail.com</a>'+':ایمیل'+'</h5><h5>'+'.'+'تمامی حفوق برای آرتر محفوظ است'+'©'+'</h5></footer>'
-        // fetch( + page /*, options */)
-        //     .then((response) => response.text())
-        //     .then((html) => {
-        //         document.getElementById("my-scrollbar-2").innerHTML = html;
-        //     })
-        //     .catch((error) => {
-        //         console.warn(error);
-        //     });
-    }
     let addr = window.location.href
+    let currentPageContainer = document.getElementById("current-page")
     if (addr.endsWith("demo"))
-        loadHome('demo.php')
+        currentPageContainer.innerText = "نمونه کار"
+    else if (addr.endsWith("home"))
+        currentPageContainer.innerText = "خانه"
     else if (addr.endsWith("blog"))
-        loadHome('blog.php')
+        currentPageContainer.innerText = "بلاگ"
     else if (addr.endsWith("history"))
-        loadHome('history.php')
+        currentPageContainer.innerText = "تاریخچه"
     else if (addr.endsWith("shop"))
-        loadHome('shop.php')
+        currentPageContainer.innerText = "فروشگاه"
     else if (addr.endsWith("contact"))
-        loadHome('contact.php')
-    else
-        loadHome('home.php')
-
+        currentPageContainer.innerText = "تماس با من"
 </script>
-
-
